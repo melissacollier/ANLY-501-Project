@@ -12,98 +12,37 @@ import json
 import io
 import requests
 
-### cleaning data function
-def checkType(data):
-    ### Checking datatypes before cleaning
-    print (data.info())
+### check datatypes 
+def checkType(dataset, filename):
+    file1 = open(filename,'a')
+    file1.write('Size of the dataframe is ' + str(dataset.shape) +'.\n\n')
+    file1.close()
     
 # function to write size/shape results to a .txt
-def dataInfo(dataset):
-    file1 = open('basic dataframe info.txt','a')
+def dataInfo(dataset, filename):
+    file1 = open(filename,'a')
     file1.write('Size of the dataframe is ' + str(dataset.shape) +'.\n\n')
     file1.write('There are ' + str(dataset.size) + ' elements in this dataset.\n\n')
     file1.write('Data types of each columns are\n ' + str(dataset.dtypes) +'\n\n')
     file1.close()
 
 ##count of null rows
-def nullCount(dataset):
-    file1 = open('basic dataframe info.txt','a')
+def nullCount(dataset, filename):
+    file1 = open(filename,'a')
     nulls = dataset.isnull().values.ravel().sum()
     file1.write('\nThe total number of rows with null values is: \n' + str(nulls) +'.\n\n')
     file1.close()
 
 # get unique value for each variable
-def get_Univalue(dataset):
-    names = list(dataset) # list of header name
-    
+def get_Univalue(dataset, filename):
+    names = list(dataset) # list of header name   
     for i in range(0,len(names)-1):
         var = names[i]
         unique_values = dataset[var].unique()
-        file1 = open('unique_values.txt','a')
+        file1 = open(filename,'a')
         file1.write('The unique values for ' + ' " '+ str(var) + '"' + ' are ' + str(unique_values) + '.\n\n')
         file1.close()
-
-# detect missing values
-def missingValue(dataset):
-    print(dataset.isnull().sum())
-    
- def main():
-    ### Water Data
-    url='https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2016/0/0'
-    waterResp = urllib.request.urlopen(url)
-    waterRawdata = json.loads(waterResp.read().decode())
-    # read json into dataframe, "dict" format, cannot read dict directly
-    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS'])    
-    #### output into .csv file, optional
-    waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
-    ### use cleaning data function
-    waterResult = waterClean(waterDF)
-
-    ### Cancer Data
-    url = 'https://www.statecancerprofiles.cancer.gov/incidencerates/index.php?stateFIPS=99&cancer=001&race=00&sex=0&age=001&type=incd&sortVariableName=rate&sortOrder=desc&output=1'
-    s = requests.get(url).content
-    ds = pd.read_csv(io.StringIO(s.decode('windows-1252')), skiprows=8, skipfooter=27, engine='python')   
-
-    ### Air quality Data
-    data2017 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2017.zip')
-    data2016 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2016.zip')
-    data2015 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2015.zip')
-    data2014 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2014.zip')
-    data2013 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2013.zip')
-    data2012 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2012.zip')
-    data2011 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2011.zip')
-    countyReference = pd.read_excel("https://www.schooldata.com/pdfs/US_FIPS_Codes.xls")
-
-
-#######
-### Air Quality Cleaning
-#######
-    
-##fixing the header for CountyReference
-new_header = countyReference.iloc[0]
-countyReference = countyReference[1:]
-countyReference.columns = new_header
-
-##creating a single dataframe for air quality data and exporting to a csv file
-allPollutionData = pd.concat([data2017, data2016, data2015, data2014, data2013, data2012, data2011])
-allPollutionData.to_csv('All_Pollution_Data.csv')
-
-
-dataOnlyStateCounty = allPollutionData.loc[:,['State','County']]
-referenceStateCounty = countyReference.loc[:,['State','County']]
-##groupby('State') is grouping the dataframe by the unique values in the State column.
-##The values in Country column are mapped to each unique value from State column.
-##Tthen index for County column and turn the values that are mapped to the State column into 
-##each distinct list groupings.
-##Then turn each unique grouping to a dict
-a = dataOnlyStateCounty.groupby('State')['County'].apply(list).to_dict()
-b = referenceStateCounty.groupby('State')['County'].apply(list).to_dict()
-
-
-columns = ['Year','Days with AQI','Good Days','Moderate Days','Max AQI','90th Percentile AQI',
-           'Median AQI','Days CO','Days NO2','Days Ozone',
-           'Days SO2','Days PM2.5','Days PM10']
-
+        
 
 ##break statement is used to exit out of the nearest for loop
 ##The purpose of this loop is to determine invalid States and Counties
@@ -244,6 +183,57 @@ def waterClean(data):
         wc.write(result.to_string())
     
     return result
+    
+ def main():
+    ### Water Data
+    url='https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2016/0/0'
+    waterResp = urllib.request.urlopen(url)
+    waterRawdata = json.loads(waterResp.read().decode())
+    # read json into dataframe, "dict" format, cannot read dict directly
+    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS'])    
+    #### output into .csv file, optional
+    waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
+    ### use cleaning data function
+    waterResult = waterClean(waterDF)
+
+    ### Cancer Data
+    url = 'https://www.statecancerprofiles.cancer.gov/incidencerates/index.php?stateFIPS=99&cancer=001&race=00&sex=0&age=001&type=incd&sortVariableName=rate&sortOrder=desc&output=1'
+    s = requests.get(url).content
+    ds = pd.read_csv(io.StringIO(s.decode('windows-1252')), skiprows=8, skipfooter=27, engine='python')   
+
+    ### Air quality Data
+    data2017 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2017.zip')
+    data2016 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2016.zip')
+    data2015 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2015.zip')
+    data2014 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2014.zip')
+    data2013 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2013.zip')
+    data2012 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2012.zip')
+    data2011 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2011.zip')
+    countyReference = pd.read_excel("https://www.schooldata.com/pdfs/US_FIPS_Codes.xls")
+
+
+    #######
+    ### Air Quality Cleaning
+    #######     
+    ##fixing the header for CountyReference
+    new_header = countyReference.iloc[0]
+    countyReference = countyReference[1:]
+    countyReference.columns = new_header
+    ##creating a single dataframe for air quality data and exporting to a csv file
+    allPollutionData = pd.concat([data2017, data2016, data2015, data2014, data2013, data2012, data2011])
+    allPollutionData.to_csv('All_Pollution_Data.csv')
+    dataOnlyStateCounty = allPollutionData.loc[:,['State','County']]
+    referenceStateCounty = countyReference.loc[:,['State','County']]
+    ##groupby('State') is grouping the dataframe by the unique values in the State column.
+    ##The values in Country column are mapped to each unique value from State column.
+    ##Tthen index for County column and turn the values that are mapped to the State column into 
+    ##each distinct list groupings.
+    ##Then turn each unique grouping to a dict
+    a = dataOnlyStateCounty.groupby('State')['County'].apply(list).to_dict()
+    b = referenceStateCounty.groupby('State')['County'].apply(list).to_dict()
+    columns = ['Year','Days with AQI','Good Days','Moderate Days','Max AQI','90th Percentile AQI',
+               'Median AQI','Days CO','Days NO2','Days Ozone',
+               'Days SO2','Days PM2.5','Days PM10']
 
 
 main()
