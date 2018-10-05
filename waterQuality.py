@@ -28,17 +28,21 @@ def main():
     
     #### read json into dataframe, "dict" format, cannot read dict directly
     waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS']) 
-#   print (waterDF)
-    waterDF['dataValue'] = pd.to_numeric(waterDF['dataValue'], errors='coerce')
-    #### output into .csv file, optional
+    
+#    #### output into .csv file, optional
 #    waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
 
-    ### select cleaning data function
+    ### use cleaning data function
     waterResult = waterClean(waterDF)
 
 
 ### cleaning data function
 def waterClean(data):
+    ### Checking datatypes before cleaning
+    print (data.info())
+    ### Datatype of dataValue is object, change it into numericals
+    data['dataValue'] = pd.to_numeric(data['dataValue'], errors='coerce')
+       
     ### Checking missing values/typos/outliers in datasets   
     print(pd.isna(data).sum())
     print (data.describe().transpose())
@@ -70,6 +74,7 @@ def waterClean(data):
     ### level < 1 means non-dect arsenic
     ### level in (1-10) means less than MCL == "no harm"
     ### level in (10-50) means "harmful"
+    ### binning the mean into three categories
     bins = [0,1,10,50]
     labels=['Non Detect','Less than or equal MCL','More than MCL' ]
     result['Quality']=pd.cut(result['Value'],bins,labels=labels)
