@@ -13,3 +13,9 @@ url = 'https://www.statecancerprofiles.cancer.gov/incidencerates/index.php?state
 s = requests.get(url).content
 ds = pd.read_csv(io.StringIO(s.decode('windows-1252')), skiprows=8)
 print(ds.describe())
+
+#split county, state, SEER, NPCR into separate columns
+ds['County'], ds['State'] = ds['County'].str.split(', ', 1).str
+ds['State'], ds['SEER'] = ds['State'].str.split('(', 1).str
+ds['SEER'], ds['NPCR'] = ds['SEER'].str.split(',', 1).str
+ds['NPCR'] = ds['NPCR'].str.replace(")","")
