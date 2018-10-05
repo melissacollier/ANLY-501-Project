@@ -44,10 +44,6 @@ def get_Univalue(dataset):
         file1 = open('unique_values.txt','a')
         file1.write('The unique values for ' + ' " '+ str(var) + '"' + ' are ' + str(unique_values) + '.\n\n')
         file1.close()
-
-# detect missing values
-def missingValue(dataset):
-    print(dataset.isnull().sum())
     
 ##break statement is used to exit out of the nearest for loop
 ##The purpose of this loop is to determine invalid States and Counties
