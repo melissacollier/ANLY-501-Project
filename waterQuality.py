@@ -19,15 +19,12 @@ def main():
     url = "https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2016/0/0"
     waterResp = urllib.request.urlopen(url)
     waterRawdata = json.loads(waterResp.read().decode())
-
-#    #### output the waterquality jsontxt file, optional
-    waterRawfile = open('water.json', 'w', encoding= 'utf-8')
-    json.dump(waterRawdata,waterRawfile)
-    waterRawfile.close()
     
     #### read json into dataframe, "dict" format, cannot read dict directly
     waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS']) 
-    print (waterDF)
     
     #### output into .csv file
     waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
+    
+    
+main()
