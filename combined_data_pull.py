@@ -13,10 +13,11 @@ import json
 import io
 import requests
 
-### cleaning data function
+# function to check datatypes
 def checkType(data):
-    ### Checking datatypes before cleaning
-    print (data.info())
+    file1 = open('basic dataframe info.txt','a')
+    file1.write('Datatypes of dataframe: ' + str(data.info()) +'.\n\n')
+    file1.close()
     
 # function to write size/shape results to a .txt
 def dataInfo(dataset):
@@ -48,64 +49,6 @@ def get_Univalue(dataset):
 def missingValue(dataset):
     print(dataset.isnull().sum())
     
- def main():
-    ### Water Data
-    url='https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2016/0/0'
-    waterResp = urllib.request.urlopen(url)
-    waterRawdata = json.loads(waterResp.read().decode())
-    # read json into dataframe, "dict" format, cannot read dict directly
-    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS'])    
-    #### output into .csv file, optional
-    waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
-    ### use cleaning data function
-    waterResult = waterClean(waterDF)
-
-    ### Cancer Data
-    url = 'https://www.statecancerprofiles.cancer.gov/incidencerates/index.php?stateFIPS=99&cancer=001&race=00&sex=0&age=001&type=incd&sortVariableName=rate&sortOrder=desc&output=1'
-    s = requests.get(url).content
-    ds = pd.read_csv(io.StringIO(s.decode('windows-1252')), skiprows=8, skipfooter=27, engine='python')   
-
-    ### Air quality Data
-    data2017 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2017.zip')
-    data2016 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2016.zip')
-    data2015 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2015.zip')
-    data2014 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2014.zip')
-    data2013 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2013.zip')
-    data2012 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2012.zip')
-    data2011 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2011.zip')
-    countyReference = pd.read_excel("https://www.schooldata.com/pdfs/US_FIPS_Codes.xls")
-
-
-#######
-### Air Quality Cleaning
-#######
-    
-##fixing the header for CountyReference
-new_header = countyReference.iloc[0]
-countyReference = countyReference[1:]
-countyReference.columns = new_header
-
-##creating a single dataframe for air quality data and exporting to a csv file
-allPollutionData = pd.concat([data2017, data2016, data2015, data2014, data2013, data2012, data2011])
-allPollutionData.to_csv('All_Pollution_Data.csv')
-
-
-dataOnlyStateCounty = allPollutionData.loc[:,['State','County']]
-referenceStateCounty = countyReference.loc[:,['State','County']]
-##groupby('State') is grouping the dataframe by the unique values in the State column.
-##The values in Country column are mapped to each unique value from State column.
-##Tthen index for County column and turn the values that are mapped to the State column into 
-##each distinct list groupings.
-##Then turn each unique grouping to a dict
-a = dataOnlyStateCounty.groupby('State')['County'].apply(list).to_dict()
-b = referenceStateCounty.groupby('State')['County'].apply(list).to_dict()
-
-
-columns = ['Year','Days with AQI','Good Days','Moderate Days','Max AQI','90th Percentile AQI',
-           'Median AQI','Days CO','Days NO2','Days Ozone',
-           'Days SO2','Days PM2.5','Days PM10']
-
-
 ##break statement is used to exit out of the nearest for loop
 ##The purpose of this loop is to determine invalid States and Counties
 ##The output has repitition because there are multiple state,county entries within some keys.
@@ -175,11 +118,14 @@ def numericColumnChecker(allPollutionData,columns):
 def hasPM25(airPollutionData):
     binLabels = [0,1]
     binRange = [0,1,367]
-    allPollutionData['hasPM2.5'] = pd.cut(allPollutionData['Days PM2.5'],bins = binRange, 
+    airPollutionData['hasPM2.5'] = pd.cut(airPollutionData['Days PM2.5'],bins = binRange, 
                     right = False, labels = binLabels)
     return airPollutionData
 
-###SPECIFIC TO WATER NEEDS TO BE PULLED OUT
+#####
+###WATER DATA CLEANING
+#####
+    
 ### cleaning data function
 def waterClean(data):
     ### Datatype of dataValue is object, change it into numericals
@@ -221,5 +167,62 @@ def waterClean(data):
     labels=['Non Detect','Less than or equal MCL','More than MCL' ]
     result['Quality']=pd.cut(result['Value'],bins,labels=labels)
     return result
+    
+def main():
+    ### Water Data
+    url='https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2016/0/0'
+    waterResp = urllib.request.urlopen(url)
+    waterRawdata = json.loads(waterResp.read().decode())
+    # read json into dataframe, "dict" format, cannot read dict directly
+    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS'])    
+    #### output into .csv file, optional
+    waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
+    ### use cleaning data function
+    waterResult = waterClean(waterDF)
+
+    ### Cancer Data
+    url = 'https://www.statecancerprofiles.cancer.gov/incidencerates/index.php?stateFIPS=99&cancer=001&race=00&sex=0&age=001&type=incd&sortVariableName=rate&sortOrder=desc&output=1'
+    s = requests.get(url).content
+    cancer_data = pd.read_csv(io.StringIO(s.decode('windows-1252')), skiprows=8, skipfooter=27, engine='python')   
+
+    ### Air quality Data
+    data2017 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2017.zip')
+    data2016 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2016.zip')
+    data2015 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2015.zip')
+    data2014 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2014.zip')
+    data2013 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2013.zip')
+    data2012 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2012.zip')
+    data2011 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2011.zip')
+    countyReference = pd.read_excel("https://www.schooldata.com/pdfs/US_FIPS_Codes.xls")
+
+
+    #######
+    ### Air Quality Cleaning
+    #######
+        
+    ##fixing the header for CountyReference
+    new_header = countyReference.iloc[0]
+    countyReference = countyReference[1:]
+    countyReference.columns = new_header
+    
+    ##creating a single dataframe for air quality data and exporting to a csv file
+    allPollutionData = pd.concat([data2017, data2016, data2015, data2014, data2013, data2012, data2011])
+    allPollutionData.to_csv('All_Pollution_Data.csv')
+    
+    
+    dataOnlyStateCounty = allPollutionData.loc[:,['State','County']]
+    referenceStateCounty = countyReference.loc[:,['State','County']]
+    ##groupby('State') is grouping the dataframe by the unique values in the State column.
+    ##The values in Country column are mapped to each unique value from State column.
+    ##Tthen index for County column and turn the values that are mapped to the State column into 
+    ##each distinct list groupings.
+    ##Then turn each unique grouping to a dict
+    a = dataOnlyStateCounty.groupby('State')['County'].apply(list).to_dict()
+    b = referenceStateCounty.groupby('State')['County'].apply(list).to_dict()
+    
+    
+    columns = ['Year','Days with AQI','Good Days','Moderate Days','Max AQI','90th Percentile AQI',
+               'Median AQI','Days CO','Days NO2','Days Ozone',
+               'Days SO2','Days PM2.5','Days PM10']
 
 main()
