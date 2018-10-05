@@ -16,7 +16,7 @@ from urllib.request import urlopen
 
 def main():
     ### URL for arsenic level values in 2016
-    url = "https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/102/ALL/ALL/2016/0/0"
+    url = "https://ephtracking.cdc.gov/apigateway/api/v1/getCoreHolder/441/102/ALL/ALL/2016/0/0?PMDisplayId=1,2,3"
     waterResp = urllib.request.urlopen(url)
     waterRawdata = json.loads(waterResp.read().decode())
 
