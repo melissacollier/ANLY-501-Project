@@ -17,6 +17,14 @@ import requests
 def checkType(data):
     ### Checking datatypes before cleaning
     print (data.info())
+    
+# function to write size/shape results to a .txt
+def dataInfo(dataset):
+    file1 = open('basic dataframe info.txt','a')
+    file1.write('Size of the dataframe is ' + str(dataset.shape) +'.\n\n')
+    file1.write('There are ' + str(dataset.size) + ' elements in this dataset.\n\n')
+    file1.write('Data types of each columns are\n ' + str(dataset.dtypes) +'\n\n')
+    file1.close()
 
 # get unique value for each variable
 def get_Univalue(dataset):
