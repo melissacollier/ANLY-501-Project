@@ -3,6 +3,7 @@
 Created on Sat Sep 29 11:15:30 2018
 
 @author: Lin
+@dataset is very large, please wait for a few mins to load it.
 """
 
 import urllib
