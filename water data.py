@@ -17,4 +17,4 @@ with urllib.request.urlopen(url) as json_data:
     data = json.load(json_data)
 
 # load from_dict
-pd.DataFrame.from_dict(data['pmTableResultWithCWS'])   
+data = pd.DataFrame.from_dict(data['pmTableResultWithCWS'])   
