@@ -15,7 +15,7 @@ import requests
 ### check datatypes 
 def checkType(dataset, filename):
     file1 = open(filename,'a')
-    file1.write('Size of the dataframe is ' + str(dataset.shape) +'.\n\n')
+    file1.write('Dataframe types are: ' + str(dataset.info()) +'.\n\n')
     file1.close()
     
 # function to write size/shape results to a .txt
