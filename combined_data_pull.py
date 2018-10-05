@@ -37,7 +37,6 @@ def nullCount(dataset):
 # get unique value for each variable
 def get_Univalue(dataset):
     names = list(dataset) # list of header name
-    
     for i in range(0,len(names)-1):
         var = names[i]
         unique_values = dataset[var].unique()
@@ -51,8 +50,7 @@ def get_Univalue(dataset):
 ##These aren't duplicates because the same state,county is used across different years.
 def stateCountyChecker(a,b):
     countCounty = 0
-    countState = 0
-    
+    countState = 0    
     for key in a:
           for value in a[key]:
                 try:
@@ -62,8 +60,7 @@ def stateCountyChecker(a,b):
                 except KeyError:
                       print(key,"is not a valid State or the entry is messy")
                       countState += 1
-                      break
-                  
+                      break               
     print('The number of messy States is',countState)
     print('The number of messy Counties is',countCounty)
 
@@ -75,31 +72,26 @@ def numericColumnChecker(allPollutionData,columns):
           c = allPollutionData[i].value_counts().sort_index()
           if i == 'Year':
                 print("Expecting years to be between 2011 and 2017")
-                indexLength = len(c)-1
-                
+                indexLength = len(c)-1            
                 if c.index[0] < 2011 or c.index[indexLength] > 2017:
                       print("There are invalid entries in years column")
                       invalidEntries = c[(c.index < 2011) | (c.index > 2017)].sum()
                       print("The number of invalid entries is", invalidEntries)
                 else:
-                      print("No invalid entries for",i)
-                      
+                      print("No invalid entries for",i)                    
           elif (i == 'Days with AQI' or i == 'Good Days' or i == 'Moderate Days' or i == 'Days CO'
                 or i == 'Days NO2' or i == 'Days Ozone' or i == 'Days SO2' or i == 'Days PM2.5'
                 or i == 'Days PM10'):
                 print("Expecting entries for",i,"column to between 0 and 366")
-                indexLength = len(c)-1
-                
+                indexLength = len(c)-1               
                 if c.index[0] < 0 or c.index[indexLength] > 366:
                       print("There are invalid intries in",i)
                       invalidEntries = c[(c.index < 0) | (c.index > 366)].sum()
                       print("The number of invalid entries is", invalidEntries)
                 else:
-                      print("No invalid entries for",i)
-                      
+                      print("No invalid entries for",i)             
           elif (i == 'Max AQI' or i == '90th Percentile AQI' or i == 'Median AQI'):
-                print("Expecting entries for",i,"column to be greater than 0")
-    
+                print("Expecting entries for",i,"column to be greater than 0")  
                 if c.index[0] < 0:
                       print("There are invalid intries in",i)
                       invalidEntries = c[c.index < 0].sum()
@@ -125,8 +117,7 @@ def hasPM25(airPollutionData):
 ### cleaning data function
 def waterClean(data):
     ### Datatype of dataValue is object, change it into numericals
-    data['dataValue'] = pd.to_numeric(data['dataValue'], errors='coerce')
-       
+    data['dataValue'] = pd.to_numeric(data['dataValue'], errors='coerce')      
     ### Checking missing values/typos/outliers in datasets   
     print(pd.isna(data).sum())
     print (data.describe().transpose())
@@ -135,8 +126,7 @@ def waterClean(data):
     print (data['title'].value_counts())
     displayOUT = data['display'].unique()
     dataValueOUT = data['dataValue'].unique()
-    titleOUT = data['title'].unique()
-    
+    titleOUT = data['title'].unique()   
     ### Cleaning data
     ### 1. remove non detect value of water quality 
     data = data[(data['display'] != 'Non Detect')]
@@ -153,7 +143,6 @@ def waterClean(data):
     del result['Location']
     print (result.describe())
     ### the max value is 31.837500, which is lower than 50
-
     ### According to documents in its original website:
     ### level < 1 means non-dect arsenic
     ### level in (1-10) means less than MCL == "no harm"
@@ -194,18 +183,14 @@ def main():
 
     #######
     ### Air Quality Cleaning
-    #######
-        
+    ####### 
     ##fixing the header for CountyReference
     new_header = countyReference.iloc[0]
     countyReference = countyReference[1:]
     countyReference.columns = new_header
-    
     ##creating a single dataframe for air quality data and exporting to a csv file
     allPollutionData = pd.concat([data2017, data2016, data2015, data2014, data2013, data2012, data2011])
     allPollutionData.to_csv('All_Pollution_Data.csv')
-    
-    
     dataOnlyStateCounty = allPollutionData.loc[:,['State','County']]
     referenceStateCounty = countyReference.loc[:,['State','County']]
     ##groupby('State') is grouping the dataframe by the unique values in the State column.
@@ -214,9 +199,7 @@ def main():
     ##each distinct list groupings.
     ##Then turn each unique grouping to a dict
     a = dataOnlyStateCounty.groupby('State')['County'].apply(list).to_dict()
-    b = referenceStateCounty.groupby('State')['County'].apply(list).to_dict()
-    
-    
+    b = referenceStateCounty.groupby('State')['County'].apply(list).to_dict() 
     columns = ['Year','Days with AQI','Good Days','Moderate Days','Max AQI','90th Percentile AQI',
                'Median AQI','Days CO','Days NO2','Days Ozone',
                'Days SO2','Days PM2.5','Days PM10']
