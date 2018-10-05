@@ -16,6 +16,8 @@ import requests
 def checkType(dataset, filename):
     file1 = open(filename,'a')
     file1.write('Dataframe types are: ' + str(dataset.info()) +'.\n\n')
+    file1.write("\nOverall review of dataset:\n")
+    file1.write(dataset.describe().transpose().to_string())
     file1.close()
     
 # function to write size/shape results to a .txt
@@ -26,11 +28,13 @@ def dataInfo(dataset, filename):
     file1.write('Data types of each columns are\n ' + str(dataset.dtypes) +'\n\n')
     file1.close()
 
-##count of null rows
+##count of null rows, null values in columns
 def nullCount(dataset, filename):
     file1 = open(filename,'a')
     nulls = dataset.isnull().values.ravel().sum()
     file1.write('\nThe total number of rows with null values is: \n' + str(nulls) +'.\n\n')
+    file1.write("Count of missing value for each column:\n")
+    file1.write(pd.isna(data).sum().to_string())
     file1.close()
 
 # get unique value for each variable
@@ -122,18 +126,12 @@ def hasPM25(airPollutionData):
 ### Water Data features
 #######
 def waterClean(data):
-    ### Checking datatypes before cleaning
-    print (data.info())
     ### Datatype of dataValue is object, change it into numericals
     data['dataValue'] = pd.to_numeric(data['dataValue'], errors='coerce')
     ### Checking missing values/typos/outliers in datasets  
     with open ('waterCheck.txt','w') as wc:
 #        wc.write("\nHave a general understanding of the dataset:\n")
 #        wc.write(data.info().to_string())
-        wc.write("Check if there is missing value for each column:\n")
-        wc.write(pd.isna(data).sum().to_string())
-        wc.write("\nOverall review of dataset:\n")
-        wc.write(data.describe().transpose().to_string())
         wc.write("\nvalue_counts() function: check is there any error value in 'display' colomn\n")
         wc.write(data['display'].value_counts().to_string())
         wc.write("\nvalue_counts() function:check is there any error value in 'dataValue' colomn\n")
