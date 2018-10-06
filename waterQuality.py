@@ -90,8 +90,8 @@ def waterClean(data):
     ### level < 1 means non-dect arsenic
     ### level in (1-10) means less than MCL == "no harm"
     ### level in (10-50) means "harmful"
-    bins = [0,1,10,50]
-    labels=['Non Detect','Less than or equal MCL','More than MCL' ]
+    bins = [-1,1,10,50]
+    labels=['Non Detect','Less than or equal 10','More than 10' ]
     ### 4. remove non detect value of water quality 
     result = result[(result['Quality'] != 'Non Detect')]
     result['Quality']=pd.cut(result['Value'],bins,labels=labels)
