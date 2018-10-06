@@ -1,7 +1,32 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Oct  5 21:02:12 2018
+
+@author: 
+"""
+
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @liu-yeqing Sign out
+2
+1 0 mac532/ANLY-501-Project
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+ANLY-501-Project/combined_data_pull.py
+7e54c6f  an hour ago
+@arshiasingh arshiasingh added wrapper for general fns
+@arshiasingh @JJJJJingL
+     
+244 lines (206 sloc)  10.9 KB
 # -*- coding: utf-8 -*-
 """
 Created on Sat Sep 29 11:15:30 2018
-
 @dataset is very large, please wait for a few mins to load it.
 """
 
@@ -15,6 +40,7 @@ import requests
 ### check datatypes 
 def checkType(dataset, filename):
     file1 = open(filename,'a')
+    file1.write('Dataframe types are: ' + str(dataset.info()) +'.\n\n')
     file1.write("\nOverall review of dataset:\n")
     file1.write(dataset.describe().transpose().to_string())
     file1.close()
@@ -22,7 +48,7 @@ def checkType(dataset, filename):
 # function to write size/shape results to a .txt
 def dataInfo(dataset, filename):
     file1 = open(filename,'a')
-    file1.write('\n\nSize of the dataframe is ' + str(dataset.shape) +'.\n\n')
+    file1.write('Size of the dataframe is ' + str(dataset.shape) +'.\n\n')
     file1.write('There are ' + str(dataset.size) + ' elements in this dataset.\n\n')
     file1.write('Data types of each columns are\n ' + str(dataset.dtypes) +'\n\n')
     file1.close()
@@ -43,7 +69,7 @@ def get_Univalue(dataset, filename):
         var = names[i]
         unique_values = dataset[var].unique()
         file1 = open(filename,'a')
-        file1.write('\n\nThe unique values for ' + ' " '+ str(var) + '"' + ' are ' + str(unique_values) + '.\n\n')
+        file1.write('The unique values for ' + ' " '+ str(var) + '"' + ' are ' + str(unique_values) + '.\n\n')
         file1.close()
         
 def genFnsWrapper(dataset, filename):
@@ -134,6 +160,8 @@ def waterClean(data):
     data['dataValue'] = pd.to_numeric(data['dataValue'], errors='coerce')
     ### Checking missing values/typos/outliers in datasets  
     with open ('waterCheck.txt','w') as wc:
+#        wc.write("\nHave a general understanding of the dataset:\n")
+#        wc.write(data.info().to_string())
         wc.write("\nvalue_counts() function: check is there any error value in 'display' colomn\n")
         wc.write(data['display'].value_counts().to_string())
         wc.write("\nvalue_counts() function:check is there any error value in 'dataValue' colomn\n")
@@ -193,6 +221,7 @@ def main():
     waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
     ### use cleaning data function
     waterResult = waterClean(waterDF)
+    del waterResult["rollover"]
 
     ### Cancer Data
     url = 'https://www.statecancerprofiles.cancer.gov/incidencerates/index.php?stateFIPS=99&cancer=001&race=00&sex=0&age=001&type=incd&sortVariableName=rate&sortOrder=desc&output=1'
@@ -224,14 +253,14 @@ def main():
     genFnsWrapper(allPollutionData, 'Air_data_analysis.txt')
     allPollutionData.to_csv('All_Pollution_Data.csv')
     dataOnlyStateCounty = allPollutionData.loc[:,['State','County']]
-    referenceStateCounty = countyReference.loc[:,['State','County Name']]
+    referenceStateCounty = countyReference.loc[:,['State','County']]
     ##groupby('State') is grouping the dataframe by the unique values in the State column.
     ##The values in Country column are mapped to each unique value from State column.
     ##Tthen index for County column and turn the values that are mapped to the State column into 
     ##each distinct list groupings.
     ##Then turn each unique grouping to a dict
     a = dataOnlyStateCounty.groupby('State')['County'].apply(list).to_dict()
-    b = referenceStateCounty.groupby('State')['County Name'].apply(list).to_dict()
+    b = referenceStateCounty.groupby('State')['County'].apply(list).to_dict()
     columns = ['Year','Days with AQI','Good Days','Moderate Days','Max AQI','90th Percentile AQI',
                'Median AQI','Days CO','Days NO2','Days Ozone',
                'Days SO2','Days PM2.5','Days PM10']
