@@ -94,7 +94,7 @@ def numericColumnChecker(allPollutionData,columns):
                       file1.close()
                 else:
                     file1 = open('Air_data_analysis.txt','a')
-                    file1.write('\n\nNo invalid entries for: ', +str(i))
+                    file1.write('\n\nNo invalid entries for: ' +str(i))
                     file1.close()                     
           elif (i == 'Days with AQI' or i == 'Good Days' or i == 'Moderate Days' or i == 'Days CO'
                 or i == 'Days NO2' or i == 'Days Ozone' or i == 'Days SO2' or i == 'Days PM2.5'
@@ -121,7 +121,7 @@ def numericColumnChecker(allPollutionData,columns):
                       invalidEntries = c[c.index < 0].sum()
                       file1 = open('Air_data_analysis.txt','a')
                       file1.write('\n\nThere are invalid intries in'+str(i))
-                      file1.write('\nThe number of invalid entries is: ', str(invalidEntries))
+                      file1.write('\nThe number of invalid entries is: '+ str(invalidEntries))
                       file1.close()    
                 else:
                       file1 = open('Air_data_analysis.txt','a')
@@ -147,6 +147,8 @@ def waterClean(data):
     data['dataValue'] = pd.to_numeric(data['dataValue'], errors='coerce')
     ### Checking missing values/typos/outliers in datasets  
     with open ('waterCheck.txt','w') as wc:
+#        wc.write("\nHave a general understanding of the dataset:\n")
+#        wc.write(data.info().to_string())
         wc.write("\nvalue_counts() function: check is there any error value in 'display' colomn\n")
         wc.write(data['display'].value_counts().to_string())
         wc.write("\nvalue_counts() function:check is there any error value in 'dataValue' colomn\n")
@@ -182,11 +184,12 @@ def waterClean(data):
     ### level < 1 means non-dect arsenic
     ### level in (1-10) means less than MCL == "no harm"
     ### level in (10-50) means "harmful"
-    bins = [0,1,10,50]
+    bins = [-1,1,10,50]
     labels=['Non Detect','Less than or equal MCL','More than MCL' ]
     ### 4. remove non detect value of water quality 
-    result = result[(result['Quality'] != 'Non Detect')]
+   
     result['Quality']=pd.cut(result['Value'],bins,labels=labels)
+    result = result[(result['Quality'] != 'Non Detect')]
     with open ('waterCheck.txt','a') as wc:
         wc.write("\nThe cleaned dataset and new dataset features\n")
         wc.write(result.to_string())
@@ -199,11 +202,12 @@ def main():
     waterResp = urllib.request.urlopen(url)
     waterRawdata = json.loads(waterResp.read().decode())
     # read json into dataframe, "dict" format, cannot read dict directly
-    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS']) 
+    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS'])
+    del waterDF["rollover"]
     #run general analysis
     genFnsWrapper(waterDF, 'Water_data_analysis.txt')
     #### output into .csv file, optional
-    waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
+    waterDF.to_csv('waterQuality.csv', sep=',', encoding='utf-8')
     ### use cleaning data function
     waterResult = waterClean(waterDF)
 

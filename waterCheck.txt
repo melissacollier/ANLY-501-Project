@@ -1,0 +1,3050 @@
+
+value_counts() function: check is there any error value in 'display' colomn
+Non Detect                3961
+Less than or equal MCL    2095
+Greater than MCL           165
+value_counts() function:check is there any error value in 'dataValue' colomn
+0.50      1273
+1.00       651
+0.00       644
+0.70       390
+0.25       301
+1.50       275
+2.50       219
+2.00       137
+3.00       134
+5.00        76
+0.40        65
+4.00        64
+1.40        48
+0.80        41
+1.25        38
+0.85        38
+1.10        34
+0.01        32
+2.20        30
+1.20        30
+1.60        28
+6.00        26
+1.30        25
+2.05        24
+2.30        23
+2.60        22
+1.80        22
+2.40        21
+3.20        21
+0.60        20
+8.00        19
+2.80        19
+2.10        19
+1.70        18
+0.20        17
+0.90        15
+4.30        15
+3.60        12
+5.30        11
+4.70        11
+5.50        11
+4.50        11
+3.10        11
+1.90        11
+0.63        10
+2.70        10
+1.75        10
+1.67        10
+3.50        10
+7.00        10
+6.90        10
+6.80         9
+9.00         9
+1.15         8
+3.80         8
+1.45         8
+10.00        8
+0.75         8
+3.70         7
+7.50         7
+4.80         7
+6.40         7
+5.70         7
+0.30         7
+0.67         7
+4.10         7
+5.60         7
+0.95         7
+3.40         7
+2.03         6
+5.10         6
+0.68         6
+4.20         6
+1.06         6
+3.30         6
+2.90         6
+1.65         6
+2.75         6
+1.18         6
+6.20         5
+0.55         5
+7.60         5
+5.80         5
+9.20         5
+0.31         5
+4.15         5
+0.07         5
+2.55         5
+0.88         5
+3.90         5
+7.20         5
+8.50         5
+0.93         5
+5.40         5
+2.33         5
+1.77         5
+1.36         5
+13.00        5
+3.75         5
+2.25         5
+0.05         5
+1.43         4
+2.38         4
+6.50         4
+8.10         4
+2.45         4
+0.38         4
+5.90         4
+1.95         4
+4.40         4
+2.48         4
+1.85         4
+0.83         4
+0.78         4
+7.40         4
+0.43         4
+6.10         4
+7.83         4
+7.80         4
+0.19         4
+0.48         4
+1.83         4
+0.53         4
+1.05         4
+1.23         4
+0.64         3
+2.95         3
+8.80         3
+1.22         3
+12.00        3
+6.04         3
+9.60         3
+2.73         3
+1.19         3
+0.65         3
+0.58         3
+0.86         3
+4.05         3
+8.30         3
+1.14         3
+1.24         3
+2.67         3
+1.35         3
+2.63         3
+9.70         3
+1.28         3
+9.30         3
+2.08         3
+9.33         3
+3.65         3
+3.83         3
+0.10         3
+6.63         3
+5.68         3
+2.94         3
+7.30         3
+1.55         3
+3.44         3
+0.29         3
+3.95         3
+2.37         3
+0.13         3
+2.65         3
+7.98         3
+1.37         3
+16.00        3
+10.25        3
+4.75         3
+1.29         3
+13.50        3
+11.50        3
+6.75         3
+3.15         3
+8.75         3
+1.33         3
+5.45         3
+11.00        3
+1.58         3
+0.17         3
+8.90         3
+2.85         3
+2.28         3
+4.90         3
+1.92         3
+0.57         3
+0.73         3
+7.90         3
+1.09         3
+5.19         3
+1.27         3
+1.68         3
+2.21         2
+3.16         2
+4.95         2
+9.10         2
+14.00        2
+1.38         2
+3.25         2
+2.35         2
+19.50        2
+0.81         2
+0.61         2
+3.53         2
+1.84         2
+9.40         2
+13.88        2
+9.25         2
+1.78         2
+9.53         2
+4.73         2
+2.34         2
+3.99         2
+0.11         2
+8.17         2
+5.55         2
+1.13         2
+6.60         2
+0.34         2
+3.33         2
+0.04         2
+8.60         2
+6.25         2
+8.56         2
+7.45         2
+0.39         2
+7.10         2
+2.16         2
+0.21         2
+15.00        2
+0.76         2
+9.50         2
+2.17         2
+7.25         2
+8.25         2
+5.25         2
+6.30         2
+6.45         2
+0.92         2
+2.32         2
+6.58         2
+0.24         2
+3.27         2
+4.54         2
+2.51         2
+3.67         2
+5.20         2
+28.50        2
+5.28         2
+10.40        2
+0.87         2
+10.23        2
+11.25        2
+3.05         2
+14.75        2
+8.33         2
+13.18        2
+6.89         2
+2.36         2
+1.73         2
+1.08         2
+2.27         2
+7.32         2
+13.33        2
+24.75        2
+8.65         2
+7.65         2
+1.34         2
+5.03         2
+7.38         2
+12.60        2
+2.06         2
+6.70         2
+0.82         2
+1.03         2
+6.21         2
+5.08         2
+9.90         2
+4.93         2
+1.89         2
+7.69         2
+8.28         2
+2.99         2
+3.01         2
+3.77         2
+9.93         2
+1.99         2
+6.32         2
+6.15         2
+8.70         2
+0.46         2
+2.14         2
+0.44         2
+0.54         2
+1.87         2
+6.34         2
+0.45         2
+3.43         2
+3.79         2
+3.59         2
+10.80        2
+4.92         2
+6.73         1
+13.10        1
+0.89         1
+2.62         1
+1.79         1
+4.12         1
+4.67         1
+10.46        1
+11.52        1
+15.88        1
+37.08        1
+7.70         1
+26.00        1
+0.28         1
+41.42        1
+6.72         1
+2.53         1
+7.34         1
+1.69         1
+1.86         1
+6.83         1
+5.34         1
+5.51         1
+32.00        1
+36.38        1
+91.81        1
+12.86        1
+4.47         1
+1.48         1
+8.09         1
+4.14         1
+64.00        1
+9.13         1
+1.52         1
+7.54         1
+2.24         1
+4.74         1
+2.52         1
+7.68         1
+10.37        1
+12.85        1
+4.02         1
+1.01         1
+7.26         1
+9.78         1
+11.13        1
+6.33         1
+6.11         1
+7.43         1
+8.57         1
+5.82         1
+6.51         1
+46.75        1
+6.31         1
+8.07         1
+1.47         1
+5.36         1
+3.45         1
+20.01        1
+1.97         1
+9.73         1
+2.46         1
+2.15         1
+1.54         1
+16.25        1
+33.50        1
+0.96         1
+4.17         1
+5.33         1
+1.51         1
+6.37         1
+3.94         1
+6.47         1
+3.85         1
+16.04        1
+4.77         1
+9.28         1
+4.58         1
+7.91         1
+11.67        1
+3.87         1
+0.91         1
+9.31         1
+8.58         1
+3.61         1
+4.18         1
+22.50        1
+73.00        1
+17.75        1
+10.75        1
+13.02        1
+12.25        1
+1.49         1
+11.08        1
+0.22         1
+15.25        1
+48.15        1
+5.31         1
+7.01         1
+4.11         1
+3.34         1
+6.28         1
+4.09         1
+79.25        1
+0.27         1
+10.13        1
+7.22         1
+3.36         1
+6.84         1
+6.85         1
+4.86         1
+8.23         1
+1.64         1
+7.03         1
+4.78         1
+6.57         1
+31.40        1
+4.26         1
+7.79         1
+6.94         1
+10.15        1
+2.72         1
+4.72         1
+17.31        1
+3.81         1
+12.10        1
+3.69         1
+13.17        1
+18.25        1
+7.29         1
+10.57        1
+1.44         1
+1.46         1
+16.63        1
+5.44         1
+4.19         1
+7.99         1
+1.93         1
+3.35         1
+3.84         1
+4.63         1
+5.27         1
+30.50        1
+9.22         1
+6.78         1
+14.84        1
+0.14         1
+5.05         1
+17.33        1
+6.44         1
+0.36         1
+4.22         1
+15.63        1
+9.80         1
+4.64         1
+8.81         1
+51.00        1
+25.75        1
+9.77         1
+4.61         1
+10.32        1
+4.27         1
+9.46         1
+15.40        1
+121.50       1
+8.93         1
+7.02         1
+14.88        1
+1.94         1
+2.07         1
+10.81        1
+1.31         1
+11.19        1
+8.73         1
+35.00        1
+4.81         1
+5.38         1
+9.55         1
+5.35         1
+5.37         1
+1.42         1
+10.79        1
+1.66         1
+13.30        1
+1.53         1
+0.74         1
+7.44         1
+0.47         1
+10.83        1
+0.15         1
+16.53        1
+10.78        1
+3.55         1
+9.52         1
+9.35         1
+10.47        1
+2.12         1
+2.69         1
+9.79         1
+7.93         1
+4.87         1
+270.00       1
+8.68         1
+4.68         1
+8.74         1
+1.32         1
+1.96         1
+2.91         1
+3.21         1
+1.82         1
+0.51         1
+25.91        1
+13.98        1
+1.04         1
+0.62         1
+0.72         1
+15.61        1
+19.98        1
+8.62         1
+17.80        1
+2.43         1
+5.29         1
+4.13         1
+11.48        1
+29.40        1
+21.35        1
+5.41         1
+1.62         1
+21.55        1
+22.20        1
+8.03         1
+2.88         1
+1.74         1
+8.39         1
+19.75        1
+21.25        1
+16.75        1
+23.88        1
+6.77         1
+4.38         1
+7.28         1
+3.47         1
+7.11         1
+22.49        1
+7.67         1
+5.95         1
+2.59         1
+32.76        1
+4.65         1
+5.21         1
+6.13         1
+0.26         1
+6.92         1
+7.18         1
+4.33         1
+6.48         1
+5.47         1
+43.75        1
+2.04         1
+2.13         1
+4.53         1
+2.47         1
+4.88         1
+3.37         1
+0.37         1
+8.16         1
+9.39         1
+15.11        1
+5.15         1
+3.78         1
+9.29         1
+2.93         1
+1.17         1
+91.50        1
+21.00        1
+26.25        1
+29.00        1
+66.00        1
+20.50        1
+17.00        1
+10.50        1
+5.75         1
+4.25         1
+9.37         1
+9.99         1
+18.93        1
+2.18         1
+3.86         1
+7.37         1
+5.02         1
+5.85         1
+2.61         1
+13.43        1
+74.20        1
+0.98         1
+6.39         1
+35.75        1
+44.50        1
+47.50        1
+9.23         1
+11.30        1
+7.13         1
+15.41        1
+3.93         1
+13.38        1
+3.38         1
+10.65        1
+2.26         1
+2.82         1
+8.88         1
+1.57         1
+6.06         1
+9.38         1
+11.85        1
+11.97        1
+1.12         1
+7.41         1
+4.07         1
+3.26         1
+3.42         1
+0.56         1
+0.52         1
+8.27         1
+12.90        1
+19.25        1
+23.75        1
+20.25        1
+14.60        1
+6.43         1
+2.22         1
+6.02         1
+2.79         1
+3.06         1
+2.84         1
+5.72         1
+5.22         1
+8.40         1
+2.89         1
+3.18         1
+4.83         1
+7.66         1
+14.17        1
+2.56         1
+10.33        1
+4.60         1
+1.72         1
+14.63        1
+7.48         1
+15.28        1
+8.35         1
+13.80        1
+13.57        1
+4.94         1
+6.74         1
+2.09         1
+1.98         1
+6.65         1
+5.89         1
+1.41         1
+45.97        1
+3.41         1
+4.37         1
+6.16         1
+0.41         1
+2.98         1
+8.59         1
+43.83        1
+20.87        1
+4.36         1
+2.02         1
+0.33         1
+5.14         1
+2.76         1
+7.97         1
+5.16         1
+0.71         1
+9.58         1
+20.90        1
+18.85        1
+1.21         1
+value_counts() function:check is there any error value in 'title' colomn 
+Island, WA             116
+Stone, MO               84
+Pierce, WA              71
+Orange, NY              61
+Kern, CA                59
+Monterey, CA            59
+Thurston, WA            52
+Los Angeles, CA         50
+Dutchess, NY            49
+San Bernardino, CA      48
+Taney, MO               48
+King, WA                47
+Fresno, CA              46
+Litchfield, CT          46
+Westchester, NY         46
+Marion, OR              44
+Ulster, NY              43
+Kitsap, WA              38
+Yakima, WA              38
+Deschutes, OR           38
+San Joaquin, CA         37
+Sacramento, CA          36
+New London, CT          34
+Snohomish, WA           33
+Madera, CA              32
+Tolland, CT             32
+Riverside, CA           31
+Utah, UT                31
+Grant, WA               30
+Lane, OR                30
+Greene, MO              30
+Spokane, WA             29
+Fairfield, CT           29
+Windham, CT             29
+Sullivan, NY            29
+Saratoga, NY            29
+Tulare, CA              29
+La Plata, CO            28
+Barry, MO               28
+El Paso, CO             28
+Tehama, CA              27
+Christian, MO           26
+Whatcom, WA             26
+Tompkins, NY            26
+San Diego, CA           25
+Washington, UT          25
+Sonoma, CA              25
+Delaware, NY            25
+Stanislaus, CA          25
+Lake, CA                25
+Chittenden, VT          24
+Garfield, CO            24
+York, ME                24
+Tuolumne, CA            24
+York, SC                24
+San Luis Obispo, CA     24
+Niagara, NY             23
+Greene, NY              23
+Clallam, WA             23
+Salt Lake, UT           23
+Bernalillo, NM          22
+Dona Ana, NM            22
+Summit, UT              22
+Otero, NM               22
+St. Lawrence, NY        22
+Linn, OR                22
+Santa Cruz, CA          21
+Bucks, PA               21
+Jackson, OR             21
+Otsego, NY              21
+Essex, NY               21
+Chautauqua, NY          20
+Chenango, NY            20
+Hartford, CT            20
+Rio Arriba, NM          20
+Shasta, CA              19
+Oswego, NY              19
+Mason, WA               19
+Middlesex, CT           19
+Cache, UT               19
+McDowell, WV            18
+Weber, UT               18
+Box Elder, UT           18
+Cattaraugus, NY         18
+Okanogan, WA            18
+San Juan, NM            18
+Erie, NY                18
+Nassau, NY              18
+Jefferson, CO           17
+Clackamas, OR           17
+Lexington, SC           16
+Contra Costa, CA        16
+Hancock, ME             16
+Sanpete, UT             16
+Valencia, NM            16
+Routt, CO               16
+Putnam, NY              16
+Warren, NY              16
+Iron, UT                16
+Newton, MO              15
+Santa Clara, CA         15
+Albany, NY              15
+Larimer, CO             15
+Bennington, VT          15
+Lincoln, NM             14
+Broome, NY              14
+Montgomery, PA          14
+Napa, CA                14
+Herkimer, NY            14
+Taos, NM                14
+San Mateo, CA           14
+Placer, CA              14
+Pitkin, CO              14
+Sandoval, NM            14
+Klamath, OR             14
+Jefferson, WV           14
+Lawrence, MO            13
+Teller, CO              13
+Boulder, CO             13
+Wasatch, UT             13
+Santa Barbara, CA       13
+Crawford, KS            13
+Penobscot, ME           13
+Polk, MO                13
+Jefferson, WA           13
+Sevier, UT              13
+Berkeley, WV            13
+Windham, VT             13
+Douglas, CO             13
+Santa Fe, NM            13
+Rutland, VT             12
+Adams, CO               12
+Hillsborough, FL        12
+Skagit, WA              12
+Pueblo, CO              12
+Gunnison, CO            12
+Tioga, NY               12
+Yuba, CA                12
+New Haven, CT           12
+Otero, CO               12
+Butte, CA               12
+Franklin, WA            12
+Montgomery, NY          12
+Millard, UT             12
+Jasper, MO              12
+Lewis, WA               12
+Somerset, PA            12
+Delta, CO               11
+Cherokee, KS            11
+Berks, PA               11
+Perry, PA               11
+Windsor, VT             11
+Solano, CA              11
+Columbia, NY            11
+Calaveras, CA           11
+Nevada, CA              11
+San Juan, WA            11
+Benton, WA              11
+Schuylkill, PA          11
+Jefferson, NY           11
+Chester, PA             11
+Eagle, CO               11
+Josephine, OR           11
+Hickory, MO             11
+Allegheny, PA           11
+Madison, NY             10
+McKinley, NM            10
+Burlington, NJ          10
+Summit, CO              10
+Broward, FL             10
+Androscoggin, ME        10
+Chemung, NY             10
+Davis, UT               10
+Webster, MO             10
+Clinton, NY             10
+Allegany, NY            10
+Montrose, CO            10
+Hunterdon, NJ           10
+Fayette, PA             10
+Luzerne, PA             10
+Oconee, SC              10
+McDonald, MO            10
+Stevens, WA             10
+Cambria, PA             10
+Ontario, NY              9
+Kings, CA                9
+Aroostook, ME            9
+Kennebec, ME             9
+Livingston, NY           9
+Orange, CA               9
+Richland, SC             9
+Yamhill, OR              9
+Washington, NY           9
+Dauphin, PA              9
+Chelan, WA               9
+Mercer, WV               9
+Morgan, WV               9
+Sussex, NJ               9
+Onondaga, NY             9
+Tooele, UT               9
+Orangeburg, SC           9
+Franklin, PA             9
+Klickitat, WA            9
+Morris, NJ               9
+Merced, CA               9
+Finney, KS               9
+Scott, IA                9
+Steuben, NY              8
+Stearns, MN              8
+Greenbrier, WV           8
+Washington, ME           8
+Erie, PA                 8
+Mendocino, CA            8
+Wayne, NY                8
+Chaffee, CO              8
+Randolph, WV             8
+Johnson, IA              8
+Westmoreland, PA         8
+Dorchester, SC           8
+El Dorado, CA            8
+Tillamook, OR            8
+Bergen, NJ               8
+Sumter, SC               8
+Oneida, NY               8
+Clark, WA                8
+Arapahoe, CO             8
+Lincoln, OR              8
+Monmouth, NJ             8
+Crawford, PA             8
+Scott, MO                8
+Somerset, ME             8
+Monroe, PA               8
+Walla Walla, WA          8
+Pasco, FL                8
+Kittitas, WA             8
+Fulton, NY               8
+Garfield, UT             8
+Orleans, NY              8
+Grays Harbor, WA         8
+Colfax, NM               7
+Indiana, PA              7
+Torrance, NM             7
+Marin, CA                7
+Marshall, WV             7
+Costilla, CO             7
+York, PA                 7
+Harlan, KY               7
+Cedar, MO                7
+Hennepin, MN             7
+Kane, UT                 7
+Ocean, NJ                7
+Scott, MN                7
+Wright, MO               7
+Huerfano, CO             7
+Jefferson, MO            7
+San Miguel, NM           7
+New Madrid, MO           7
+Grand, CO                7
+Ventura, CA              7
+Schoharie, NY            7
+Lancaster, PA            7
+Barber, KS               7
+Adams, WA                7
+Mineral, WV              7
+Fayette, WV              7
+Knox, ME                 7
+Cowlitz, WA              7
+Preston, WV              7
+Warren, NJ               7
+Mesa, CO                 7
+Prowers, CO              6
+Mariposa, CA             6
+Seneca, NY               6
+Whitman, WA              6
+Newberry, SC             6
+Pratt, KS                6
+Clatsop, OR              6
+Wayne, UT                6
+Logan, CO                6
+Columbia, OR             6
+Cumberland, PA           6
+Yolo, CA                 6
+Orleans, VT              6
+Middlesex, NJ            6
+Pendleton, WV            6
+Morgan, UT               6
+Dunklin, MO              6
+Brooke, WV               6
+Washington, MN           6
+Mason, WV                6
+Polk, OR                 6
+Northampton, PA          6
+Oxford, ME               6
+Wyoming, WV              6
+Clearfield, PA           6
+Anoka, MN                6
+Pocahontas, WV           6
+Washington, OR           6
+Glenn, CA                6
+Cumberland, ME           6
+Douglas, OR              6
+Wood, WV                 6
+Wasco, OR                6
+Atlantic, NJ             6
+Dade, MO                 6
+Elbert, CO               6
+Lackawanna, PA           6
+Grand Isle, VT           6
+Pickens, SC              6
+Beaufort, SC             5
+Caledonia, VT            5
+Olmsted, MN              5
+Spartanburg, SC          5
+Labette, KS              5
+Chisago, MN              5
+Inyo, CA                 5
+San Benito, CA           5
+Butler, PA               5
+Susquehanna, PA          5
+Rensselaer, NY           5
+Archuleta, CO            5
+Nicholas, WV             5
+Barton, MO               5
+Marlboro, SC             5
+Douglas, WA              5
+Laclede, MO              5
+Conejos, CO              5
+Pine, MN                 5
+Logan, WV                5
+Mingo, WV                5
+Aiken, SC                5
+Amador, CA               5
+Emery, UT                5
+Tucker, WV               5
+Carroll, IA              5
+Catron, NM               5
+Tioga, PA                5
+Clear Creek, CO          5
+Eddy, NM                 5
+Lea, NM                  5
+Milwaukee, WI            5
+Grant, NM                5
+Vernon, MO               5
+Dallas, MO               5
+Hampton, SC              5
+Socorro, NM              5
+San Juan, UT             5
+Malheur, OR              5
+Lincoln, WA              5
+Franklin, NY             5
+Gray, KS                 5
+Ford, KS                 5
+Waldo, ME                5
+Addison, VT              5
+Plumas, CA               4
+Bates, MO                4
+Horry, SC                4
+Weld, CO                 4
+Tyler, WV                4
+Sibley, MN               4
+Bent, CO                 4
+Lincoln, CO              4
+Audrain, MO              4
+Umatilla, OR             4
+Clay, MN                 4
+Sutter, CA               4
+Goodhue, MN              4
+Baker, OR                4
+Butler, MO               4
+Dubuque, IA              4
+Marion, SC               4
+Greenwood, SC            4
+Edwards, KS              4
+Northumberland, PA       4
+Seward, KS               4
+Crowley, CO              4
+Wetzel, WV               4
+Piute, UT                4
+Centre, PA               4
+Williamsburg, SC         4
+Pinellas, FL             4
+Montgomery, KS           4
+Yates, NY                4
+Camden, MO               4
+Lamoille, VT             4
+Saluda, SC               4
+Linn, KS                 4
+Polk, MN                 4
+St. Charles, MO          4
+Humboldt, CA             4
+Mono, CA                 4
+Greene, PA               4
+Palm Beach, FL           4
+Alameda, CA              4
+Curry, OR                4
+Washington, VT           4
+Cortland, NY             4
+Hampshire, WV            4
+Braxton, WV              4
+Kit Carson, CO           4
+Curry, NM                4
+Laurens, SC              4
+McLeod, MN               4
+Huntingdon, PA           4
+Roseau, MN               4
+Lycoming, PA             4
+Monroe, WV               4
+Linn, IA                 4
+Freeborn, MN             4
+Cass, MO                 4
+Crook, OR                4
+Lincoln, MO              4
+Clarion, PA              4
+Osage, KS                4
+Armstrong, PA            4
+Lake, FL                 4
+Blair, PA                4
+Piscataquis, ME          4
+Rio Grande, CO           4
+Schenectady, NY          4
+Ozark, MO                4
+Camden, NJ               3
+Hamilton, KS             3
+Hancock, WV              3
+Jefferson, PA            3
+Polk, IA                 3
+Harrison, WV             3
+Dallas, IA               3
+Iron, MO                 3
+Franklin, ME             3
+Pulaski, KY              3
+Marion, KS               3
+Alpine, CA               3
+Kiowa, CO                3
+Kershaw, SC              3
+Allen, KS                3
+Mitchell, KS             3
+Blue Earth, MN           3
+Venango, PA              3
+Harrison, IA             3
+Morrow, OR               3
+Madison, KY              3
+Henderson, KY            3
+Walworth, WI             3
+Clark, KS                3
+Siskiyou, CA             3
+Multnomah, OR            3
+Hardin, KY               3
+Essex, VT                3
+Johnson, KS              3
+Mercer, PA               3
+Carbon, PA               3
+Neosho, KS               3
+Wright, IA               3
+Sedgwick, CO             3
+Meeker, MN               3
+St. Clair, MO            3
+Wayne, MO                3
+Gloucester, NJ           3
+Miami, KS                3
+Lafayette, MO            3
+Baca, CO                 3
+Stafford, KS             3
+Pemiscot, MO             3
+Miami-Dade, FL           3
+Ouray, CO                3
+Coos, OR                 3
+Otter Tail, MN           3
+Kanawha, WV              3
+San Francisco, CA        3
+Roosevelt, NM            3
+Potter, PA               3
+Lewis, NY                3
+Kiowa, KS                3
+Jackson, MO              3
+Pend Oreille, WA         3
+Lyon, KY                 3
+Raleigh, WV              3
+Fillmore, MN             3
+Beaver, PA               3
+Grant, MN                3
+Brevard, FL              3
+Montezuma, CO            3
+Sherburne, MN            3
+Laurel, KY               3
+McKean, PA               3
+Warren, PA               3
+Beltrami, MN             3
+Sarasota, FL             3
+Wayne, WV                3
+Yuma, CO                 3
+Franklin, KS             3
+Hardy, WV                3
+Essex, NJ                3
+Uintah, UT               3
+Wright, MN               3
+Colusa, CA               3
+Webster, IA              3
+Pawnee, KS               3
+Cheyenne, CO             3
+San Miguel, CO           3
+Jackson, WV              3
+Greenwood, KS            3
+Bell, KY                 3
+Alamosa, CO              3
+Skamania, WA             3
+Morgan, CO               3
+Comanche, KS             3
+Pacific, WA              3
+Floyd, KY                3
+Henry, MO                3
+Meade, KS                3
+Ohio, KY                 3
+Haskell, KS              3
+Norton, KS               3
+Carter, KY               3
+Marion, WV               3
+Phillips, CO             2
+Bedford, PA              2
+Nicholas, KY             2
+Rich, UT                 2
+Sherman, OR              2
+Yellow Medicine, MN      2
+Quay, NM                 2
+Wallowa, OR              2
+Pottawattamie, IA        2
+Cibola, NM               2
+Calloway, KY             2
+Barbour, WV              2
+Park, CO                 2
+Palo Alto, IA            2
+Morton, KS               2
+Winnebago, WI            2
+Grant, KS                2
+Saguache, CO             2
+Story, IA                2
+Hancock, IA              2
+Trinity, CA              2
+Juab, UT                 2
+Stanton, KS              2
+Rio Blanco, CO           2
+Carver, MN               2
+Anderson, SC             2
+Hamilton, IA             2
+Emmet, IA                2
+Butler, KY               2
+Crawford, IA             2
+Union, OR                2
+Hinsdale, CO             2
+Cumberland, NJ           2
+Howard, MO               2
+Pettis, MO               2
+Cabell, WV               2
+Summers, WV              2
+Adams, PA                2
+Franklin, VT             2
+Greenville, SC           2
+Ellsworth, KS            2
+Cameron, PA              2
+Douglas, KS              2
+Hopkins, KY              2
+Hodgeman, KS             2
+Columbia, PA             2
+Lehigh, PA               2
+Sagadahoc, ME            2
+Grayson, KY              2
+Passaic, NJ              2
+Putnam, WV               2
+Roane, WV                2
+Lincoln, WV              2
+Pike, KY                 2
+Daggett, UT              2
+Lincoln, ME              2
+Grant, KY                2
+Pleasants, WV            2
+Webster, WV              2
+Duval, FL                2
+Georgetown, SC           2
+Grand, UT                2
+Becker, MN               2
+Morgan, MO               2
+Rush, KS                 2
+Sierra, NM               2
+McCracken, KY            2
+Hamilton, NY             2
+Mercer, NJ               2
+Clinton, PA              2
+Letcher, KY              2
+Elk, PA                  2
+Reynolds, MO             2
+Plymouth, IA             2
+Ritchie, WV              2
+Trigg, KY                2
+Pulaski, MO              2
+Rowan, KY                2
+Pike, MO                 2
+Chautauqua, KS           2
+Ferry, WA                2
+Stevens, MN              2
+Butler, KS               2
+Muhlenberg, KY           2
+Washington, CO           2
+Wayne, PA                2
+Pope, MN                 2
+Fremont, CO              2
+Jessamine, KY            2
+Cape Girardeau, MO       2
+Lawrence, PA             2
+Lake, OR                 2
+Kearny, KS               2
+Sauk, WI                 2
+Hardin, IA               2
+Clinton, MO              2
+Stevens, KS              2
+Renville, MN             2
+Webster, KY              2
+Sierra, CA               2
+Swift, MN                2
+Douglas, MN              2
+Iowa, IA                 2
+Greene, IA               2
+Monroe, MO               2
+Luna, NM                 2
+Lassen, CA               2
+Lake, CO                 2
+Franklin, MO             2
+Wyoming, NY              2
+McLean, KY               2
+Union, KY                2
+Bourbon, KS              2
+Winnebago, IA            2
+Monroe, NY               2
+Sumner, KS               2
+Mora, NM                 2
+Grant, OR                2
+Wabaunsee, KS            2
+Johnson, MO              2
+Colleton, SC             2
+Jasper, SC               2
+Duchesne, UT             2
+Dodge, WI                2
+Buena Vista, IA          2
+Jackson, KY              2
+Wilson, KS               2
+Franklin, IA             2
+Fairfield, SC            2
+Lane, KS                 2
+Linn, MO                 2
+Greenup, KY              2
+Clay, MO                 2
+Waukesha, WI             2
+St. Francois, MO         2
+Crow Wing, MN            2
+Koochiching, MN          2
+Dickinson, KS            2
+Grant, WV                2
+Beaver, UT               2
+Gentry, MO               2
+Worth, IA                2
+Clay, WV                 2
+Hidalgo, NM              2
+Faribault, MN            2
+Whitley, KY              2
+Union, NJ                2
+Manatee, FL              2
+Knox, KY                 2
+Bamberg, SC              2
+Smith, KS                2
+Muscatine, IA            1
+Mason, KY                1
+Wolfe, KY                1
+Union, NM                1
+Miller, MO               1
+Caldwell, MO             1
+Texas, MO                1
+Pendleton, KY            1
+Door, WI                 1
+Isanti, MN               1
+Wapello, IA              1
+Taylor, WV               1
+Sioux, IA                1
+Lewis, WV                1
+Menifee, KY              1
+Ashland, WI              1
+Martin, FL               1
+Rock, WI                 1
+Russell, KY              1
+Nodaway, MO              1
+Douglas, MO              1
+Lancaster, SC            1
+Kossuth, IA              1
+Knott, KY                1
+Clay, KY                 1
+Perry, KY                1
+Juniata, PA              1
+Greeley, KS              1
+Ohio, WV                 1
+Columbia, WI             1
+St. Louis City, MO       1
+Chippewa, WI             1
+Madison, MO              1
+Harrison, MO             1
+Chester, SC              1
+Wyoming, PA              1
+Polk, FL                 1
+Scott, KY                1
+Green, KY                1
+Powell, KY               1
+Rock, MN                 1
+Montgomery, KY           1
+Woodson, KS              1
+Taylor, KY               1
+Franklin, KY             1
+Hancock, KY              1
+Ramsey, MN               1
+Benton, IA               1
+Ness, KS                 1
+Las Animas, CO           1
+Monongalia, WV           1
+Boyd, KY                 1
+McCreary, KY             1
+Jefferson, KY            1
+Hood River, OR           1
+Philadelphia, PA         1
+Russell, KS              1
+Marquette, WI            1
+Woodford, KY             1
+Martin, KY               1
+Clay, FL                 1
+Cowley, KS               1
+Clark, KY                1
+Somerset, NJ             1
+St. Louis, MO            1
+Winona, MN               1
+Citrus, FL               1
+Caldwell, KY             1
+Marshall, KS             1
+Macon, MO                1
+Simpson, KY              1
+Ellis, KS                1
+Lee, FL                  1
+Sawyer, WI               1
+Nemaha, KS               1
+Shelby, KY               1
+Monona, IA               1
+Rice, MN                 1
+Madison, FL              1
+Boone, KY                1
+Norman, MN               1
+Garfield, WA             1
+Lewis, MO                1
+Lawrence, KY             1
+Humboldt, IA             1
+Estill, KY               1
+Charleston, SC           1
+Osborne, KS              1
+Allen, KY                1
+Warren, KY               1
+Dodge, MN                1
+Collier, FL              1
+Decatur, IA              1
+Harrison, KY             1
+Abbeville, SC            1
+Boyle, KY                1
+Pottawatomie, KS         1
+Charlotte, FL            1
+Clinton, IA              1
+Cooper, MO               1
+Daviess, MO              1
+Union, PA                1
+Marion, FL               1
+Asotin, WA               1
+Keokuk, IA               1
+Kandiyohi, MN            1
+Garrard, KY              1
+Casey, KY                1
+Calhoun, IA              1
+Moniteau, MO             1
+Nelson, KY               1
+Shelby, IA               1
+Owsley, KY               1
+Rockcastle, KY           1
+Larue, KY                1
+Volusia, FL              1
+Cumberland, KY           1
+Cherokee, SC             1
+Florence, SC             1
+Benton, MN               1
+Mercer, KY               1
+Monroe, KY               1
+Morgan, KY               1
+Wyandotte, KS            1
+Calhoun, WV              1
+Adair, KY                1
+Columbia, WA             1
+Osceola, FL              1
+Atchison, KS             1
+Gilpin, CO               1
+Ozaukee, WI              1
+New York, NY             1
+Lincoln, KY              1
+Montour, PA              1
+Washington, PA           1
+Nicollet, MN             1
+Barnwell, SC             1
+McCormick, SC            1
+Leavenworth, KS          1
+Washington, KY           1
+Fleming, KY              1
+Boone, IA                1
+Callaway, MO             1
+Fond du Lac, WI          1
+Todd, KY                 1
+Lyon, KS                 1
+Shawano, WI              1
+Bourbon, KY              1
+Jefferson, OR            1
+Randolph, MO             1
+Barron, WI               1
+Dolores, CO              1
+Shannon, MO              1
+Seminole, FL             1
+Oregon, MO               1
+Edgefield, SC            1
+Barton, KS               1
+Lincoln, WI              1
+Berkeley, SC             1
+Moffat, CO               1
+Salem, NJ                1
+Anderson, KS             1
+Todd, MN                 1
+Clinton, KY              1
+DeKalb, MO               1
+Alachua, FL              1
+Livingston, KY           1
+Hickman, KY              1
+Pierce, WI               1
+Carbon, UT               1
+Nassau, FL               1
+Christian, KY            1
+Coffey, KS               1
+Jackson, CO              1
+Leslie, KY               1
+Wood, WI                 1
+Howell, MO               1
+Wichita, KS              1
+Gulf, FL                 1
+Dixie, FL                1
+Crittenden, KY           1
+Shelby, MO               1
+Traverse, MN             1
+Red Lake, MN             1
+Mississippi, MO          1
+Grundy, MO               1
+Edmonson, KY             1
+Fayette, KY              1
+Delaware, PA             1
+Pike, PA                 1
+Chesterfield, SC         1
+Scotland, MO             1
+Pocahontas, IA           1
+Barren, KY               1
+Breathitt, KY            1
+Orange, FL               1
+Mifflin, PA              1
+Phelps, MO               1
+Winneshiek, IA           1
+Lee, KY                  1
+Putnam, MO               1
+Okaloosa, FL             1
+Elk, KS                  1
+Allendale, SC            1
+Harper, KS               1
+Marion, MO               1
+Magoffin, KY             1
+Jefferson, WI            1
+Ballard, KY              1
+Outagamie, WI            1
+Graham, KS               1
+Hendry, FL               1
+Sumter, FL               1
+Cass, IA                 1
+Gilmer, WV               1
+Cole, MO                 1
+Lebanon, PA              1
+Monroe, FL               1
+Broomfield, CO           1
+Morris, KS               1
+Rawlins, KS              1
+Grundy, IA               1
+Mitchell, IA             1
+Sullivan, MO             1
+Anderson, KY             1
+Hudson, NJ               1
+Jackson, IA              1
+Mineral, CO              1
+Shawnee, KS              1
+Bay, FL                  1
+Harding, NM              1
+Kanabec, MN              1
+Adair, IA                1
+Snyder, PA               1
+Perry, MO                1
+Montgomery, IA           1
+Stoddard, MO             1
+Washington, MO           1
+Clearwater, MN           1
+Buchanan, IA             1
+Osceola, IA              1
+Marion, KY               1
+Scott, KS                1
+Jackson, WI              1
+Jackson, KS              1
+Woodbury, IA             1
+Chickasaw, IA            1
+Brown, WI                1
+Waupaca, WI              1
+San Juan, CO             1
+Rockland, NY             1
+Oconto, WI               1
+Hart, KY                 1
+Okeechobee, FL           1
+Jones, IA                1
+Houston, MN              1
+Cayuga, NY               1
+Adair, MO                1
+Ste. Genevieve, MO       1
+Jefferson, KS            1
+Modoc, CA                1
+Bremer, IA               1
+Douglas, WI              1
+Johnson, KY              1
+Reno, KS                 1
+Doddridge, WV            1
+Murray, MN               1
+Graves, KY               1
+Kenton, KY               1
+Union, SC                1
+Denver, CO               1
+Gilchrist, FL            1
+DeSoto, FL               1
+Upshur, WV               1
+Lee, SC                  1
+La Crosse, WI            1
+Guthrie, IA              1
+Lac qui Parle, MN        1
+Sheboygan, WI            1
+Aitkin, MN               1
+Sedgwick, KS             1
+Schuyler, NY             1
+Saline, KS               1
+Washington, IA           1
+Wayne, KY                1
+The mean value of arsenic concerntration for each county
+title
+Abbeville, SC           2.500000
+Adair, IA               2.100000
+Adair, KY               1.000000
+Adair, MO               0.000000
+Adams, CO               0.584167
+Adams, PA               0.700000
+Adams, WA               3.164286
+Addison, VT             0.500000
+Aiken, SC               2.500000
+Aitkin, MN              5.290000
+Alachua, FL             0.400000
+Alameda, CA             1.000000
+Alamosa, CO             5.760000
+Albany, NY              0.924667
+Allegany, NY            1.427000
+Allegheny, PA           0.613636
+Allen, KS               1.266667
+Allen, KY               0.500000
+Allendale, SC           2.500000
+Alpine, CA              1.000000
+Amador, CA              1.000000
+Anderson, KS            0.500000
+Anderson, KY            1.000000
+Anderson, SC            2.500000
+Androscoggin, ME        2.296000
+Anoka, MN               2.625000
+Arapahoe, CO            0.775000
+Archuleta, CO           0.810000
+Armstrong, PA           0.650000
+Aroostook, ME           0.755556
+Ashland, WI             0.730000
+Asotin, WA              0.500000
+Atchison, KS            2.800000
+Atlantic, NJ            0.293333
+Audrain, MO             1.202500
+Baca, CO                1.416667
+Baker, OR               2.237500
+Ballard, KY             5.000000
+Bamberg, SC             2.500000
+Barber, KS              2.492857
+Barbour, WV             0.000000
+Barnwell, SC            2.500000
+Barren, KY              0.250000
+Barron, WI              1.820000
+Barry, MO               0.179643
+Barton, KS              3.050000
+Barton, MO              0.000000
+Bates, MO               0.000000
+Bay, FL                 0.250000
+Beaufort, SC            2.500000
+Beaver, PA              0.916667
+Beaver, UT              4.600000
+Becker, MN              6.790000
+Bedford, PA             3.360000
+Bell, KY                0.583333
+Beltrami, MN            2.470000
+Bennington, VT          0.666667
+Bent, CO                2.000000
+Benton, IA              0.500000
+Benton, MN              0.500000
+Benton, WA              2.538182
+Bergen, NJ              2.000000
+Berkeley, SC            2.500000
+Berkeley, WV            0.000000
+Berks, PA               0.825455
+Bernalillo, NM          4.636364
+Blair, PA               0.500000
+Blue Earth, MN          3.810000
+Boone, IA               7.000000
+Boone, KY               1.300000
+Boulder, CO             0.476923
+Bourbon, KS             0.500000
+Bourbon, KY             1.000000
+Box Elder, UT           2.472778
+Boyd, KY                0.250000
+Boyle, KY               1.000000
+Braxton, WV             0.000000
+Breathitt, KY           1.000000
+Bremer, IA              0.500000
+Brevard, FL             0.506667
+Brooke, WV              0.000000
+Broome, NY              0.500000
+Broomfield, CO          0.500000
+Broward, FL             0.785000
+Brown, WI               0.460000
+Buchanan, IA            0.500000
+Bucks, PA               2.795714
+Buena Vista, IA         2.100000
+Burlington, NJ          0.330000
+Butler, KS              0.500000
+Butler, KY              0.250000
+Butler, MO              1.262500
+Butler, PA              0.620000
+Butte, CA               1.708333
+Cabell, WV              0.000000
+Cache, UT               1.683684
+Calaveras, CA           1.000000
+Caldwell, KY            0.250000
+Caldwell, MO            0.000000
+Caledonia, VT           0.500000
+Calhoun, IA             3.000000
+Calhoun, WV             0.000000
+Callaway, MO            1.300000
+Calloway, KY            5.000000
+Cambria, PA             1.065000
+Camden, MO              0.000000
+Camden, NJ              0.356667
+Cameron, PA             1.500000
+Cape Girardeau, MO      0.000000
+Carbon, PA              0.700000
+Carbon, UT              1.800000
+Carroll, IA             2.320000
+Carter, KY              0.500000
+Carver, MN              0.930000
+Casey, KY               0.500000
+Cass, IA                0.500000
+Cass, MO                0.257500
+Catron, NM              2.450000
+Cattaraugus, NY         1.416667
+Cayuga, NY              0.500000
+Cedar, MO               0.000000
+Centre, PA              0.550000
+Chaffee, CO             2.337500
+Charleston, SC          2.500000
+Charlotte, FL           2.100000
+Chautauqua, KS          0.500000
+Chautauqua, NY          1.171500
+Chelan, WA              0.983333
+Chemung, NY             1.400000
+Chenango, NY            2.363500
+Cherokee, KS            0.790909
+Cherokee, SC            2.500000
+Chester, PA             0.804545
+Chester, SC             2.500000
+Chesterfield, SC        2.500000
+Cheyenne, CO            2.703333
+Chickasaw, IA           1.000000
+Chippewa, WI            0.250000
+Chisago, MN             1.440000
+Chittenden, VT          0.500000
+Christian, KY           0.250000
+Christian, MO           0.009615
+Cibola, NM              6.000000
+Citrus, FL              0.300000
+Clackamas, OR           2.511765
+Clallam, WA             1.830435
+Clarion, PA             0.862500
+Clark, KS               8.290000
+Clark, KY               5.000000
+Clark, WA               1.705000
+Clatsop, OR             3.833333
+Clay, FL                1.100000
+Clay, KY                0.500000
+Clay, MN                2.442500
+Clay, MO                0.000000
+Clay, WV                0.000000
+Clear Creek, CO         0.500000
+Clearfield, PA          0.933333
+Clearwater, MN          4.260000
+Clinton, IA             0.500000
+Clinton, KY             0.250000
+Clinton, MO             0.000000
+Clinton, NY             1.175000
+Clinton, PA             0.250000
+Coffey, KS              0.500000
+Cole, MO                0.000000
+Colfax, NM              0.500000
+Colleton, SC            2.500000
+Collier, FL             1.660000
+Columbia, NY            0.931818
+Columbia, OR            3.945000
+Columbia, PA            1.790000
+Columbia, WA            0.500000
+Columbia, WI            2.550000
+Colusa, CA              3.110000
+Comanche, KS            3.046667
+Conejos, CO             1.020000
+Contra Costa, CA        7.238125
+Cooper, MO              0.000000
+Coos, OR                2.333333
+Cortland, NY            1.375000
+Costilla, CO            0.560000
+Cowley, KS              0.500000
+Cowlitz, WA             2.022857
+Crawford, IA            0.500000
+Crawford, KS            0.519231
+Crawford, PA            2.815000
+Crittenden, KY          0.250000
+Crook, OR               4.060000
+Crow Wing, MN           2.820000
+Crowley, CO             0.650000
+Cumberland, KY          0.250000
+Cumberland, ME          1.833333
+Cumberland, NJ          0.135000
+Cumberland, PA          0.666667
+Curry, NM               3.500000
+Curry, OR               2.000000
+Dade, MO                0.000000
+Daggett, UT             0.875000
+Dallas, IA              6.926667
+Dallas, MO              0.000000
+Dauphin, PA             1.735556
+Daviess, MO             0.000000
+Davis, UT               0.840000
+DeKalb, MO              0.000000
+DeSoto, FL              0.250000
+Decatur, IA             0.500000
+Delaware, NY            0.935200
+Delaware, PA            0.700000
+Delta, CO               0.618182
+Denver, CO              0.250000
+Deschutes, OR           2.391842
+Dickinson, KS           1.350000
+Dixie, FL               4.800000
+Doddridge, WV           0.000000
+Dodge, MN               0.500000
+Dodge, WI               7.450000
+Dolores, CO             0.500000
+Dona Ana, NM            4.176818
+Door, WI                1.000000
+Dorchester, SC          2.500000
+Douglas, CO             0.707692
+Douglas, KS             0.500000
+Douglas, MN             0.500000
+Douglas, MO             0.760000
+Douglas, OR             1.666667
+Douglas, WA             1.600000
+Douglas, WI             0.250000
+Dubuque, IA             1.000000
+Duchesne, UT            2.975000
+Dunklin, MO             2.103333
+Dutchess, NY            0.629592
+Duval, FL               0.145000
+Eagle, CO               0.509091
+Eddy, NM                3.500000
+Edgefield, SC           2.500000
+Edmonson, KY            1.000000
+Edwards, KS             1.500000
+El Dorado, CA           3.100000
+El Paso, CO             0.650714
+Elbert, CO              2.833333
+Elk, KS                 0.500000
+Elk, PA                 1.500000
+Ellis, KS               3.200000
+Ellsworth, KS           0.800000
+Emery, UT               0.566000
+Emmet, IA               1.750000
+Erie, NY                1.081667
+Erie, PA                2.792500
+Essex, NJ               1.000000
+Essex, NY               1.071429
+Essex, VT               0.583333
+Estill, KY              0.250000
+Fairfield, CT           0.796552
+Fairfield, SC           2.500000
+Faribault, MN           1.490000
+Fayette, KY             0.500000
+Fayette, PA             0.915000
+Fayette, WV             0.000000
+Ferry, WA               1.350000
+Fillmore, MN            0.500000
+Finney, KS              2.125556
+Fleming, KY             0.500000
+Florence, SC            2.500000
+Floyd, KY               0.450000
+Fond du Lac, WI         1.000000
+Ford, KS                2.780000
+Franklin, IA            0.750000
+Franklin, KS            0.500000
+Franklin, KY            0.250000
+Franklin, ME            2.583333
+Franklin, MO            0.000000
+Franklin, NY            0.900000
+Franklin, PA            0.611111
+Franklin, VT            1.250000
+Franklin, WA            3.392500
+Freeborn, MN            4.715000
+Fremont, CO             0.515000
+Fresno, CA              4.391304
+Fulton, NY              0.575000
+Garfield, CO            0.668333
+Garfield, UT            1.835000
+Garfield, WA            2.800000
+Garrard, KY             1.000000
+Gentry, MO              0.000000
+Georgetown, SC          2.500000
+Gilchrist, FL           0.800000
+Gilmer, WV              0.000000
+Gilpin, CO              0.400000
+Glenn, CA               1.213333
+Gloucester, NJ          0.666667
+Goodhue, MN             0.870000
+Graham, KS              7.830000
+Grand Isle, VT          0.500000
+Grand, CO               0.828571
+Grand, UT               0.815000
+Grant, KS               2.860000
+Grant, KY               0.250000
+Grant, MN               5.286667
+Grant, NM               0.940000
+Grant, OR               1.085000
+Grant, WA               3.021333
+Grant, WV               0.000000
+Graves, KY              5.000000
+Gray, KS                1.796000
+Grays Harbor, WA        1.500000
+Grayson, KY             0.625000
+Greeley, KS             4.150000
+Green, KY               1.000000
+Greenbrier, WV          0.090000
+Greene, IA              4.425000
+Greene, MO              0.000000
+Greene, NY              1.371304
+Greene, PA              0.925000
+Greenup, KY             0.500000
+Greenville, SC          2.500000
+Greenwood, KS           0.500000
+Greenwood, SC           2.500000
+Grundy, IA              1.300000
+Grundy, MO              0.000000
+Gulf, FL                0.190000
+Gunnison, CO            0.940000
+Guthrie, IA             5.400000
+Hamilton, IA            3.500000
+Hamilton, KS            0.900000
+Hamilton, NY            1.100000
+Hampshire, WV           0.000000
+Hampton, SC             2.500000
+Hancock, IA             6.500000
+Hancock, KY             0.500000
+Hancock, ME             1.484375
+Hancock, WV             0.000000
+Hardin, IA              4.875000
+Hardin, KY              0.500000
+Harding, NM             3.000000
+Hardy, WV               0.000000
+Harlan, KY              0.378571
+Harper, KS              1.200000
+Harrison, IA            1.143333
+Harrison, KY            1.000000
+Harrison, MO            0.000000
+Harrison, WV            0.000000
+Hart, KY                0.250000
+Hartford, CT            1.821000
+Haskell, KS             1.263333
+Henderson, KY           0.433333
+Hendry, FL              0.250000
+Hennepin, MN            2.610000
+Henry, MO               0.000000
+Herkimer, NY            0.487857
+Hickman, KY             0.250000
+Hickory, MO             0.000000
+Hidalgo, NM             4.550000
+Hillsborough, FL        0.848333
+Hinsdale, CO            1.400000
+Hodgeman, KS            2.700000
+Hood River, OR          0.500000
+Hopkins, KY             0.250000
+Horry, SC               2.500000
+Houston, MN             0.500000
+Howard, MO              1.400000
+Howell, MO              0.000000
+Hudson, NJ              0.500000
+Huerfano, CO            0.485714
+Humboldt, CA            2.125000
+Humboldt, IA            2.000000
+Hunterdon, NJ           1.409000
+Huntingdon, PA          2.160000
+Indiana, PA             0.957143
+Inyo, CA               14.870000
+Iowa, IA                1.700000
+Iron, MO                1.286667
+Iron, UT                2.074375
+Isanti, MN              0.500000
+Island, WA              5.183707
+Jackson, CO             0.500000
+Jackson, IA             4.610000
+Jackson, KS             1.100000
+Jackson, KY             0.250000
+Jackson, MO             0.000000
+Jackson, OR             2.694762
+Jackson, WI             0.380000
+Jackson, WV             0.000000
+Jasper, MO              0.147500
+Jasper, SC              2.500000
+Jefferson, CO           0.518235
+Jefferson, KS           1.100000
+Jefferson, KY           1.000000
+Jefferson, MO           0.362857
+Jefferson, NY           1.500000
+Jefferson, OR           2.000000
+Jefferson, PA           0.800000
+Jefferson, WA           3.123846
+Jefferson, WI           6.800000
+Jefferson, WV           0.000000
+Jessamine, KY           1.000000
+Johnson, IA             4.041250
+Johnson, KS             0.976667
+Johnson, KY             0.250000
+Johnson, MO             0.000000
+Jones, IA               4.100000
+Josephine, OR           3.552727
+Juab, UT                2.850000
+Juniata, PA             0.700000
+Kanabec, MN             0.500000
+Kanawha, WV             0.000000
+Kandiyohi, MN           6.630000
+Kane, UT                1.835714
+Kearny, KS              1.250000
+Kennebec, ME            1.777778
+Kenton, KY              1.250000
+Keokuk, IA              0.500000
+Kern, CA               13.054576
+Kershaw, SC             2.500000
+King, WA                3.469787
+Kings, CA               5.005556
+Kiowa, CO               2.433333
+Kiowa, KS               0.916667
+Kit Carson, CO          4.150000
+Kitsap, WA              2.813421
+Kittitas, WA            2.838750
+Klamath, OR             2.503571
+Klickitat, WA           0.822222
+Knott, KY               0.500000
+Knox, KY                0.625000
+Knox, ME                1.641429
+Koochiching, MN         1.960000
+Kossuth, IA             1.000000
+La Crosse, WI           0.250000
+La Plata, CO            0.644643
+Labette, KS             0.500000
+Lac qui Parle, MN       1.150000
+Lackawanna, PA          2.755000
+Laclede, MO             0.020000
+Lafayette, MO           0.000000
+Lake, CA                2.254000
+Lake, CO                1.635000
+Lake, FL                1.825000
+Lake, OR                8.100000
+Lamoille, VT            0.875000
+Lancaster, PA           0.900000
+Lancaster, SC           2.500000
+Lane, KS                6.915000
+Lane, OR                4.168667
+Larimer, CO             0.493333
+Larue, KY               0.250000
+Las Animas, CO          0.500000
+Lassen, CA              6.220000
+Laurel, KY              0.333333
+Laurens, SC             2.500000
+Lawrence, KY            0.500000
+Lawrence, MO            0.022308
+Lawrence, PA            0.700000
+Lea, NM                 6.900000
+Leavenworth, KS         0.500000
+Lebanon, PA             0.700000
+Lee, FL                 0.500000
+Lee, KY                 0.600000
+Lee, SC                 2.500000
+Lehigh, PA              0.600000
+Leslie, KY              0.250000
+Letcher, KY             0.375000
+Lewis, MO               0.000000
+Lewis, NY               1.500000
+Lewis, WA               2.458333
+Lewis, WV               0.000000
+Lexington, SC           2.500000
+Lincoln, CO             2.550000
+Lincoln, KY             1.000000
+Lincoln, ME             0.500000
+Lincoln, MO             0.127500
+Lincoln, NM             0.771429
+Lincoln, OR             2.562500
+Lincoln, WA             4.526000
+Lincoln, WI             1.200000
+Lincoln, WV             0.000000
+Linn, IA                0.762500
+Linn, KS                0.500000
+Linn, MO                0.000000
+Linn, OR                3.002727
+Litchfield, CT          0.915435
+Livingston, KY          5.000000
+Livingston, NY          1.277778
+Logan, CO               5.888333
+Logan, WV               0.000000
+Los Angeles, CA         4.578800
+Luna, NM                3.450000
+Luzerne, PA             1.455000
+Lycoming, PA            2.367500
+Lyon, KS                0.500000
+Lyon, KY                0.250000
+Macon, MO               0.000000
+Madera, CA             17.529375
+Madison, FL             0.500000
+Madison, KY             2.306667
+Madison, MO             0.000000
+Madison, NY             1.251000
+Magoffin, KY            1.000000
+Malheur, OR             9.988000
+Manatee, FL             0.280000
+Marin, CA               2.070000
+Marion, FL              0.300000
+Marion, KS              0.733333
+Marion, KY              0.250000
+Marion, MO              0.000000
+Marion, OR              4.169091
+Marion, SC              2.500000
+Marion, WV              0.000000
+Mariposa, CA            2.183333
+Marlboro, SC            2.500000
+Marquette, WI           1.270000
+Marshall, KS            0.800000
+Marshall, WV            0.000000
+Martin, FL              0.250000
+Martin, KY              0.500000
+Mason, KY               0.500000
+Mason, WA               1.568421
+Mason, WV               0.000000
+McCormick, SC           2.500000
+McCracken, KY           2.625000
+McCreary, KY            1.000000
+McDonald, MO            0.000000
+McDowell, WV            0.060556
+McKean, PA              1.150000
+McKinley, NM            4.200000
+McLean, KY              0.250000
+McLeod, MN              3.417500
+Meade, KS               1.726667
+Meeker, MN              3.586667
+Mendocino, CA           1.775000
+Menifee, KY             0.500000
+Merced, CA             11.992222
+Mercer, KY              1.000000
+Mercer, NJ              0.475000
+Mercer, PA              0.700000
+Mercer, WV              0.000000
+Mesa, CO                0.907143
+Miami, KS               0.500000
+Miami-Dade, FL          0.300000
+Middlesex, CT           1.015789
+Middlesex, NJ           0.276667
+Mifflin, PA             0.500000
+Millard, UT             4.122500
+Miller, MO              0.000000
+Milwaukee, WI           0.712000
+Mineral, CO             4.300000
+Mineral, WV             0.000000
+Mingo, WV               0.000000
+Mississippi, MO         8.740000
+Mitchell, IA            0.500000
+Mitchell, KS            4.426667
+Modoc, CA               4.300000
+Moffat, CO              0.500000
+Moniteau, MO            1.650000
+Monmouth, NJ            0.425000
+Mono, CA               31.837500
+Monona, IA              2.400000
+Monongalia, WV          0.000000
+Monroe, FL              0.250000
+Monroe, KY              0.250000
+Monroe, MO              0.000000
+Monroe, NY              0.500000
+Monroe, PA              0.841250
+Monroe, WV              0.000000
+Monterey, CA            5.982712
+Montezuma, CO           0.500000
+Montgomery, IA          0.500000
+Montgomery, KS          0.500000
+Montgomery, KY          0.250000
+Montgomery, NY          0.529167
+Montgomery, PA          3.491429
+Montour, PA             0.700000
+Montrose, CO            0.950000
+Mora, NM                0.500000
+Morgan, CO              0.716667
+Morgan, KY              0.500000
+Morgan, MO              1.160000
+Morgan, UT              1.745000
+Morgan, WV              0.003333
+Morris, KS              0.500000
+Morris, NJ              0.396667
+Morrow, OR              1.046667
+Morton, KS              1.735000
+Muhlenberg, KY          0.475000
+Multnomah, OR           2.673333
+Murray, MN              0.500000
+Muscatine, IA           1.700000
+Napa, CA                4.648571
+Nassau, FL              0.240000
+Nassau, NY              0.708889
+Nelson, KY              1.000000
+Nemaha, KS              1.300000
+Neosho, KS              0.500000
+Ness, KS                3.600000
+Nevada, CA              2.949091
+New Haven, CT           0.713333
+New London, CT          0.901765
+New Madrid, MO          3.095714
+New York, NY            0.700000
+Newberry, SC            2.500000
+Newton, MO              0.524667
+Niagara, NY             0.079565
+Nicholas, KY            0.425000
+Nicholas, WV            0.000000
+Nicollet, MN            0.500000
+Nodaway, MO             1.290000
+Norman, MN              5.190000
+Northampton, PA         0.900000
+Northumberland, PA      1.875000
+Norton, KS              6.036667
+Ocean, NJ               0.421429
+Oconee, SC              2.500000
+Oconto, WI              6.580000
+Ohio, KY                1.833333
+Ohio, WV                0.000000
+Okaloosa, FL            1.000000
+Okanogan, WA            4.751667
+Okeechobee, FL          2.100000
+Olmsted, MN             0.500000
+Oneida, NY              1.956250
+Onondaga, NY            2.504444
+Ontario, NY             0.694444
+Orange, CA              1.737778
+Orange, FL              5.470000
+Orange, NY              0.948033
+Orangeburg, SC          2.500000
+Oregon, MO              0.000000
+Orleans, NY             0.443750
+Orleans, VT             4.221667
+Osage, KS               0.500000
+Osborne, KS             2.500000
+Osceola, FL             1.100000
+Osceola, IA             1.650000
+Oswego, NY              1.288947
+Otero, CO               0.827500
+Otero, NM               0.536364
+Otsego, NY              1.113333
+Otter Tail, MN          6.533333
+Ouray, CO               0.433333
+Outagamie, WI           0.250000
+Owsley, KY              0.250000
+Oxford, ME              0.700000
+Ozark, MO               0.422500
+Ozaukee, WI             0.250000
+Pacific, WA             4.400000
+Palm Beach, FL          0.330000
+Palo Alto, IA           5.250000
+Park, CO                0.500000
+Pasco, FL               1.057500
+Passaic, NJ             0.250000
+Pawnee, KS              0.746667
+Pemiscot, MO            0.000000
+Pend Oreille, WA        5.813333
+Pendleton, KY           0.250000
+Pendleton, WV           0.001667
+Penobscot, ME           3.063846
+Perry, KY               0.500000
+Perry, MO               0.210000
+Perry, PA               4.571818
+Pettis, MO              0.560000
+Phelps, MO              0.000000
+Philadelphia, PA        0.700000
+Phillips, CO            6.625000
+Pickens, SC             2.500000
+Pierce, WA              2.638310
+Pierce, WI              0.780000
+Pike, KY                0.375000
+Pike, MO                0.000000
+Pike, PA                0.700000
+Pine, MN                1.324000
+Pinellas, FL            1.117500
+Piscataquis, ME         4.907500
+Pitkin, CO              0.836429
+Piute, UT               3.542500
+Placer, CA              1.000000
+Pleasants, WV           0.000000
+Plumas, CA              4.477500
+Plymouth, IA            0.500000
+Pocahontas, IA          9.000000
+Pocahontas, WV          0.000000
+Polk, FL                0.190000
+Polk, IA                1.100000
+Polk, MN                7.542500
+Polk, MO                0.054615
+Polk, OR                3.021667
+Pope, MN                5.825000
+Pottawatomie, KS        0.500000
+Pottawattamie, IA       0.750000
+Potter, PA              2.336667
+Powell, KY              0.500000
+Pratt, KS               1.456667
+Preston, WV             0.000000
+Prowers, CO             1.050000
+Pueblo, CO              0.975000
+Pulaski, KY             0.500000
+Pulaski, MO             0.000000
+Putnam, MO              0.000000
+Putnam, NY              0.363125
+Putnam, WV              0.000000
+Quay, NM                4.750000
+Raleigh, WV             0.000000
+Ramsey, MN              2.340000
+Randolph, MO            0.000000
+Randolph, WV            0.000000
+Rawlins, KS             6.800000
+Red Lake, MN            0.500000
+Reno, KS                4.300000
+Rensselaer, NY          0.700000
+Renville, MN            5.100000
+Reynolds, MO            0.000000
+Rice, MN                1.480000
+Rich, UT                2.500000
+Richland, SC            2.500000
+Rio Arriba, NM          4.987500
+Rio Blanco, CO          1.250000
+Rio Grande, CO          1.000000
+Ritchie, WV             0.000000
+Riverside, CA           2.731935
+Roane, WV               0.000000
+Rock, MN                5.020000
+Rock, WI               10.250000
+Rockcastle, KY          0.250000
+Rockland, NY            1.100000
+Roosevelt, NM           6.433333
+Roseau, MN              6.372500
+Routt, CO               0.697500
+Rowan, KY               0.250000
+Rush, KS                4.450000
+Russell, KS             0.500000
+Russell, KY             5.000000
+Rutland, VT             0.500000
+Sacramento, CA          8.202222
+Sagadahoc, ME           1.120000
+Saguache, CO            2.000000
+Salem, NJ               0.200000
+Saline, KS              0.500000
+Salt Lake, UT           2.330435
+Saluda, SC              2.500000
+San Benito, CA          2.526000
+San Bernardino, CA      5.283333
+San Diego, CA           1.842400
+San Francisco, CA       1.000000
+San Joaquin, CA         3.559189
+San Juan, CO            0.500000
+San Juan, NM            0.750000
+San Juan, UT            3.576000
+San Juan, WA            2.872727
+San Luis Obispo, CA     3.050417
+San Mateo, CA           1.242857
+San Miguel, CO          2.926667
+San Miguel, NM          3.278571
+Sandoval, NM            5.250714
+Sanpete, UT             3.489375
+Santa Barbara, CA       2.363846
+Santa Clara, CA         0.985333
+Santa Cruz, CA          1.496667
+Santa Fe, NM            3.796154
+Sarasota, FL            0.250000
+Saratoga, NY            1.000690
+Sauk, WI                0.250000
+Sawyer, WI              0.250000
+Schenectady, NY         0.750000
+Schoharie, NY           2.128571
+Schuyler, NY            2.400000
+Schuylkill, PA          0.909091
+Scotland, MO            1.080000
+Scott, IA               2.881111
+Scott, KS               5.160000
+Scott, KY               0.250000
+Scott, MN               0.964286
+Scott, MO               2.693750
+Sedgwick, CO            4.986667
+Sedgwick, KS            1.100000
+Seminole, FL            0.250000
+Seneca, NY              1.166667
+Sevier, UT              2.863846
+Seward, KS              1.637500
+Shannon, MO             0.000000
+Shasta, CA              1.215789
+Shawano, WI             8.000000
+Shawnee, KS             0.500000
+Sheboygan, WI           0.250000
+Shelby, IA              0.500000
+Shelby, KY              1.000000
+Shelby, MO              0.000000
+Sherburne, MN           1.173333
+Sherman, OR             1.150000
+Sibley, MN              2.817500
+Sierra, CA              7.490000
+Sierra, NM              0.750000
+Simpson, KY             0.500000
+Sioux, IA               1.000000
+Siskiyou, CA            1.443333
+Skagit, WA              3.546667
+Skamania, WA            1.333333
+Smith, KS               7.440000
+Snohomish, WA           3.267879
+Snyder, PA              0.250000
+Socorro, NM             7.680000
+Solano, CA              2.410909
+Somerset, ME            1.600000
+Somerset, NJ            0.500000
+Somerset, PA            1.033333
+Sonoma, CA              3.161600
+Spartanburg, SC         2.500000
+Spokane, WA             2.078276
+St. Charles, MO         7.992500
+St. Clair, MO           0.000000
+St. Francois, MO        0.000000
+St. Lawrence, NY        1.513636
+St. Louis City, MO      0.680000
+St. Louis, MO           0.000000
+Stafford, KS            1.006667
+Stanislaus, CA          9.046000
+Stanton, KS             0.920000
+Ste. Genevieve, MO      2.730000
+Stearns, MN             1.872500
+Steuben, NY             0.687500
+Stevens, KS             1.655000
+Stevens, MN             0.500000
+Stevens, WA             3.767000
+Stoddard, MO            0.000000
+Stone, MO               0.386190
+Story, IA               2.750000
+Sullivan, MO            0.000000
+Sullivan, NY            1.434483
+Summers, WV             0.000000
+Summit, CO              0.510000
+Summit, UT              1.710455
+Sumner, KS              5.965000
+Sumter, FL              1.380000
+Sumter, SC              2.500000
+Susquehanna, PA         0.660000
+Sussex, NJ              0.533333
+Sutter, CA              7.332500
+Swift, MN               2.345000
+Taney, MO               0.005625
+Taos, NM                1.226429
+Taylor, KY              1.000000
+Taylor, WV              0.000000
+Tehama, CA              3.114074
+Teller, CO              0.861538
+Texas, MO               0.000000
+Thurston, WA            1.103462
+Tillamook, OR           2.687500
+Tioga, NY               1.250000
+Tioga, PA               1.882000
+Todd, KY                0.500000
+Todd, MN                0.500000
+Tolland, CT             0.750000
+Tompkins, NY            1.034615
+Tooele, UT              1.877778
+Torrance, NM            1.642857
+Traverse, MN            4.110000
+Trigg, KY               0.250000
+Trinity, CA             1.750000
+Tucker, WV              0.000000
+Tulare, CA              2.981034
+Tuolumne, CA            1.344583
+Tyler, WV               0.000000
+Uintah, UT              0.516667
+Ulster, NY              1.123256
+Umatilla, OR            1.500000
+Union, KY               0.575000
+Union, NJ               1.650000
+Union, NM               2.000000
+Union, OR               1.335000
+Union, PA               0.500000
+Union, SC               2.500000
+Upshur, WV              0.000000
+Utah, UT                1.663548
+Valencia, NM            5.535625
+Venango, PA             0.733333
+Ventura, CA             1.285714
+Vernon, MO              0.000000
+Volusia, FL             0.250000
+Wabaunsee, KS           1.050000
+Waldo, ME               1.068000
+Walla Walla, WA         2.833750
+Wallowa, OR             0.850000
+Walworth, WI            4.343333
+Wapello, IA             1.000000
+Warren, KY              5.000000
+Warren, NJ              0.614286
+Warren, NY              0.605000
+Warren, PA              3.550000
+Wasatch, UT             1.099231
+Wasco, OR               3.001667
+Washington, CO          5.645000
+Washington, IA          9.000000
+Washington, KY          0.250000
+Washington, ME          1.921250
+Washington, MN          0.621667
+Washington, MO          0.000000
+Washington, NY          0.716667
+Washington, OR          1.916667
+Washington, PA          0.500000
+Washington, UT          3.589200
+Washington, VT          0.500000
+Waukesha, WI            0.530000
+Waupaca, WI             5.450000
+Wayne, KY               0.250000
+Wayne, MO               0.353333
+Wayne, NY               0.675000
+Wayne, PA               0.600000
+Wayne, UT               6.081667
+Wayne, WV               0.000000
+Weber, UT               1.313333
+Webster, IA             0.500000
+Webster, KY             0.250000
+Webster, MO             0.129000
+Webster, WV             0.000000
+Weld, CO                0.605000
+Westchester, NY         0.630435
+Westmoreland, PA        0.881250
+Wetzel, WV              0.000000
+Whatcom, WA             3.174231
+Whitley, KY             0.350000
+Whitman, WA             0.916667
+Wichita, KS             4.300000
+Williamsburg, SC        2.500000
+Wilson, KS              0.500000
+Windham, CT             1.808966
+Windham, VT             0.500000
+Windsor, VT             0.500000
+Winnebago, IA           1.500000
+Winnebago, WI           0.250000
+Winneshiek, IA          0.500000
+Winona, MN              0.500000
+Wolfe, KY               0.500000
+Wood, WI                1.200000
+Wood, WV                0.000000
+Woodbury, IA            1.000000
+Woodford, KY            1.000000
+Woodson, KS             0.500000
+Worth, IA               2.350000
+Wright, IA              2.166667
+Wright, MN              2.400000
+Wright, MO              0.124286
+Wyandotte, KS           0.500000
+Wyoming, NY             0.250000
+Wyoming, PA             5.500000
+Wyoming, WV             0.051667
+Yakima, WA              3.412895
+Yamhill, OR             2.111111
+Yates, NY               0.725000
+Yellow Medicine, MN     0.975000
+Yolo, CA                2.563333
+York, ME                2.782917
+York, PA                3.172857
+York, SC                2.500000
+Yuba, CA                3.680000
+Yuma, CO                8.493333
+The cleaned dataset and new dataset features
+         Value           county state                 Quality
+0     2.500000        Abbeville    SC  Less than or equal MCL
+1     2.100000            Adair    IA  Less than or equal MCL
+6     3.164286            Adams    WA  Less than or equal MCL
+8     2.500000            Aiken    SC  Less than or equal MCL
+9     5.290000           Aitkin    MN  Less than or equal MCL
+12    5.760000          Alamosa    CO  Less than or equal MCL
+14    1.427000         Allegany    NY  Less than or equal MCL
+16    1.266667            Allen    KS  Less than or equal MCL
+18    2.500000        Allendale    SC  Less than or equal MCL
+23    2.500000         Anderson    SC  Less than or equal MCL
+24    2.296000     Androscoggin    ME  Less than or equal MCL
+25    2.625000            Anoka    MN  Less than or equal MCL
+32    2.800000         Atchison    KS  Less than or equal MCL
+34    1.202500          Audrain    MO  Less than or equal MCL
+35    1.416667             Baca    CO  Less than or equal MCL
+36    2.237500            Baker    OR  Less than or equal MCL
+37    5.000000          Ballard    KY  Less than or equal MCL
+38    2.500000          Bamberg    SC  Less than or equal MCL
+39    2.492857           Barber    KS  Less than or equal MCL
+41    2.500000         Barnwell    SC  Less than or equal MCL
+43    1.820000           Barron    WI  Less than or equal MCL
+45    3.050000           Barton    KS  Less than or equal MCL
+49    2.500000         Beaufort    SC  Less than or equal MCL
+51    4.600000           Beaver    UT  Less than or equal MCL
+52    6.790000           Becker    MN  Less than or equal MCL
+53    3.360000          Bedford    PA  Less than or equal MCL
+55    2.470000         Beltrami    MN  Less than or equal MCL
+57    2.000000             Bent    CO  Less than or equal MCL
+60    2.538182           Benton    WA  Less than or equal MCL
+61    2.000000           Bergen    NJ  Less than or equal MCL
+62    2.500000         Berkeley    SC  Less than or equal MCL
+65    4.636364       Bernalillo    NM  Less than or equal MCL
+67    3.810000       Blue Earth    MN  Less than or equal MCL
+68    7.000000            Boone    IA  Less than or equal MCL
+69    1.300000            Boone    KY  Less than or equal MCL
+73    2.472778        Box Elder    UT  Less than or equal MCL
+86    2.795714            Bucks    PA  Less than or equal MCL
+87    2.100000      Buena Vista    IA  Less than or equal MCL
+91    1.262500           Butler    MO  Less than or equal MCL
+93    1.708333            Butte    CA  Less than or equal MCL
+95    1.683684            Cache    UT  Less than or equal MCL
+100   3.000000          Calhoun    IA  Less than or equal MCL
+102   1.300000         Callaway    MO  Less than or equal MCL
+103   5.000000         Calloway    KY  Less than or equal MCL
+104   1.065000          Cambria    PA  Less than or equal MCL
+107   1.500000          Cameron    PA  Less than or equal MCL
+110   1.800000           Carbon    UT  Less than or equal MCL
+111   2.320000          Carroll    IA  Less than or equal MCL
+117   2.450000           Catron    NM  Less than or equal MCL
+118   1.416667      Cattaraugus    NY  Less than or equal MCL
+122   2.337500          Chaffee    CO  Less than or equal MCL
+123   2.500000       Charleston    SC  Less than or equal MCL
+124   2.100000        Charlotte    FL  Less than or equal MCL
+126   1.171500       Chautauqua    NY  Less than or equal MCL
+128   1.400000          Chemung    NY  Less than or equal MCL
+129   2.363500         Chenango    NY  Less than or equal MCL
+131   2.500000         Cherokee    SC  Less than or equal MCL
+133   2.500000          Chester    SC  Less than or equal MCL
+134   2.500000     Chesterfield    SC  Less than or equal MCL
+135   2.703333         Cheyenne    CO  Less than or equal MCL
+138   1.440000          Chisago    MN  Less than or equal MCL
+142   6.000000           Cibola    NM  Less than or equal MCL
+144   2.511765        Clackamas    OR  Less than or equal MCL
+145   1.830435          Clallam    WA  Less than or equal MCL
+147   8.290000            Clark    KS  Less than or equal MCL
+148   5.000000            Clark    KY  Less than or equal MCL
+149   1.705000            Clark    WA  Less than or equal MCL
+150   3.833333          Clatsop    OR  Less than or equal MCL
+151   1.100000             Clay    FL  Less than or equal MCL
+153   2.442500             Clay    MN  Less than or equal MCL
+158   4.260000       Clearwater    MN  Less than or equal MCL
+162   1.175000          Clinton    NY  Less than or equal MCL
+167   2.500000         Colleton    SC  Less than or equal MCL
+168   1.660000          Collier    FL  Less than or equal MCL
+170   3.945000         Columbia    OR  Less than or equal MCL
+171   1.790000         Columbia    PA  Less than or equal MCL
+173   2.550000         Columbia    WI  Less than or equal MCL
+174   3.110000           Colusa    CA  Less than or equal MCL
+175   3.046667         Comanche    KS  Less than or equal MCL
+176   1.020000          Conejos    CO  Less than or equal MCL
+177   7.238125     Contra Costa    CA  Less than or equal MCL
+179   2.333333             Coos    OR  Less than or equal MCL
+180   1.375000         Cortland    NY  Less than or equal MCL
+183   2.022857          Cowlitz    WA  Less than or equal MCL
+186   2.815000         Crawford    PA  Less than or equal MCL
+188   4.060000            Crook    OR  Less than or equal MCL
+189   2.820000        Crow Wing    MN  Less than or equal MCL
+192   1.833333       Cumberland    ME  Less than or equal MCL
+195   3.500000            Curry    NM  Less than or equal MCL
+196   2.000000            Curry    OR  Less than or equal MCL
+199   6.926667           Dallas    IA  Less than or equal MCL
+201   1.735556          Dauphin    PA  Less than or equal MCL
+211   2.391842        Deschutes    OR  Less than or equal MCL
+212   1.350000        Dickinson    KS  Less than or equal MCL
+213   4.800000            Dixie    FL  Less than or equal MCL
+216   7.450000            Dodge    WI  Less than or equal MCL
+218   4.176818         Dona Ana    NM  Less than or equal MCL
+220   2.500000       Dorchester    SC  Less than or equal MCL
+225   1.666667          Douglas    OR  Less than or equal MCL
+226   1.600000          Douglas    WA  Less than or equal MCL
+229   2.975000         Duchesne    UT  Less than or equal MCL
+230   2.103333          Dunklin    MO  Less than or equal MCL
+234   3.500000             Eddy    NM  Less than or equal MCL
+235   2.500000        Edgefield    SC  Less than or equal MCL
+237   1.500000          Edwards    KS  Less than or equal MCL
+238   3.100000        El Dorado    CA  Less than or equal MCL
+240   2.833333           Elbert    CO  Less than or equal MCL
+242   1.500000              Elk    PA  Less than or equal MCL
+243   3.200000            Ellis    KS  Less than or equal MCL
+246   1.750000            Emmet    IA  Less than or equal MCL
+247   1.081667             Erie    NY  Less than or equal MCL
+248   2.792500             Erie    PA  Less than or equal MCL
+250   1.071429            Essex    NY  Less than or equal MCL
+254   2.500000        Fairfield    SC  Less than or equal MCL
+255   1.490000        Faribault    MN  Less than or equal MCL
+259   1.350000            Ferry    WA  Less than or equal MCL
+261   2.125556           Finney    KS  Less than or equal MCL
+263   2.500000         Florence    SC  Less than or equal MCL
+266   2.780000             Ford    KS  Less than or equal MCL
+270   2.583333         Franklin    ME  Less than or equal MCL
+274   1.250000         Franklin    VT  Less than or equal MCL
+275   3.392500         Franklin    WA  Less than or equal MCL
+276   4.715000         Freeborn    MN  Less than or equal MCL
+278   4.391304           Fresno    CA  Less than or equal MCL
+281   1.835000         Garfield    UT  Less than or equal MCL
+282   2.800000         Garfield    WA  Less than or equal MCL
+285   2.500000       Georgetown    SC  Less than or equal MCL
+289   1.213333            Glenn    CA  Less than or equal MCL
+292   7.830000           Graham    KS  Less than or equal MCL
+296   2.860000            Grant    KS  Less than or equal MCL
+298   5.286667            Grant    MN  Less than or equal MCL
+300   1.085000            Grant    OR  Less than or equal MCL
+301   3.021333            Grant    WA  Less than or equal MCL
+303   5.000000           Graves    KY  Less than or equal MCL
+304   1.796000             Gray    KS  Less than or equal MCL
+305   1.500000     Grays Harbor    WA  Less than or equal MCL
+307   4.150000          Greeley    KS  Less than or equal MCL
+310   4.425000           Greene    IA  Less than or equal MCL
+312   1.371304           Greene    NY  Less than or equal MCL
+315   2.500000       Greenville    SC  Less than or equal MCL
+317   2.500000        Greenwood    SC  Less than or equal MCL
+318   1.300000           Grundy    IA  Less than or equal MCL
+322   5.400000          Guthrie    IA  Less than or equal MCL
+323   3.500000         Hamilton    IA  Less than or equal MCL
+325   1.100000         Hamilton    NY  Less than or equal MCL
+327   2.500000          Hampton    SC  Less than or equal MCL
+328   6.500000          Hancock    IA  Less than or equal MCL
+330   1.484375          Hancock    ME  Less than or equal MCL
+332   4.875000           Hardin    IA  Less than or equal MCL
+334   3.000000          Harding    NM  Less than or equal MCL
+337   1.200000           Harper    KS  Less than or equal MCL
+338   1.143333         Harrison    IA  Less than or equal MCL
+343   1.821000         Hartford    CT  Less than or equal MCL
+344   1.263333          Haskell    KS  Less than or equal MCL
+347   2.610000         Hennepin    MN  Less than or equal MCL
+352   4.550000          Hidalgo    NM  Less than or equal MCL
+354   1.400000         Hinsdale    CO  Less than or equal MCL
+355   2.700000         Hodgeman    KS  Less than or equal MCL
+358   2.500000            Horry    SC  Less than or equal MCL
+360   1.400000           Howard    MO  Less than or equal MCL
+364   2.125000         Humboldt    CA  Less than or equal MCL
+365   2.000000         Humboldt    IA  Less than or equal MCL
+366   1.409000        Hunterdon    NJ  Less than or equal MCL
+367   2.160000       Huntingdon    PA  Less than or equal MCL
+369  14.870000             Inyo    CA           More than MCL
+370   1.700000             Iowa    IA  Less than or equal MCL
+371   1.286667             Iron    MO  Less than or equal MCL
+372   2.074375             Iron    UT  Less than or equal MCL
+374   5.183707           Island    WA  Less than or equal MCL
+376   4.610000          Jackson    IA  Less than or equal MCL
+377   1.100000          Jackson    KS  Less than or equal MCL
+380   2.694762          Jackson    OR  Less than or equal MCL
+384   2.500000           Jasper    SC  Less than or equal MCL
+386   1.100000        Jefferson    KS  Less than or equal MCL
+389   1.500000        Jefferson    NY  Less than or equal MCL
+390   2.000000        Jefferson    OR  Less than or equal MCL
+392   3.123846        Jefferson    WA  Less than or equal MCL
+393   6.800000        Jefferson    WI  Less than or equal MCL
+396   4.041250          Johnson    IA  Less than or equal MCL
+400   4.100000            Jones    IA  Less than or equal MCL
+401   3.552727        Josephine    OR  Less than or equal MCL
+402   2.850000             Juab    UT  Less than or equal MCL
+406   6.630000        Kandiyohi    MN  Less than or equal MCL
+407   1.835714             Kane    UT  Less than or equal MCL
+408   1.250000           Kearny    KS  Less than or equal MCL
+409   1.777778         Kennebec    ME  Less than or equal MCL
+410   1.250000           Kenton    KY  Less than or equal MCL
+412  13.054576             Kern    CA           More than MCL
+413   2.500000          Kershaw    SC  Less than or equal MCL
+414   3.469787             King    WA  Less than or equal MCL
+415   5.005556            Kings    CA  Less than or equal MCL
+416   2.433333            Kiowa    CO  Less than or equal MCL
+418   4.150000       Kit Carson    CO  Less than or equal MCL
+419   2.813421           Kitsap    WA  Less than or equal MCL
+420   2.838750         Kittitas    WA  Less than or equal MCL
+421   2.503571          Klamath    OR  Less than or equal MCL
+425   1.641429             Knox    ME  Less than or equal MCL
+426   1.960000      Koochiching    MN  Less than or equal MCL
+431   1.150000    Lac qui Parle    MN  Less than or equal MCL
+432   2.755000       Lackawanna    PA  Less than or equal MCL
+435   2.254000             Lake    CA  Less than or equal MCL
+436   1.635000             Lake    CO  Less than or equal MCL
+437   1.825000             Lake    FL  Less than or equal MCL
+438   8.100000             Lake    OR  Less than or equal MCL
+441   2.500000        Lancaster    SC  Less than or equal MCL
+442   6.915000             Lane    KS  Less than or equal MCL
+443   4.168667             Lane    OR  Less than or equal MCL
+447   6.220000           Lassen    CA  Less than or equal MCL
+449   2.500000          Laurens    SC  Less than or equal MCL
+453   6.900000              Lea    NM  Less than or equal MCL
+458   2.500000              Lee    SC  Less than or equal MCL
+463   1.500000            Lewis    NY  Less than or equal MCL
+464   2.458333            Lewis    WA  Less than or equal MCL
+466   2.500000        Lexington    SC  Less than or equal MCL
+467   2.550000          Lincoln    CO  Less than or equal MCL
+472   2.562500          Lincoln    OR  Less than or equal MCL
+473   4.526000          Lincoln    WA  Less than or equal MCL
+474   1.200000          Lincoln    WI  Less than or equal MCL
+479   3.002727             Linn    OR  Less than or equal MCL
+481   5.000000       Livingston    KY  Less than or equal MCL
+482   1.277778       Livingston    NY  Less than or equal MCL
+483   5.888333            Logan    CO  Less than or equal MCL
+485   4.578800      Los Angeles    CA  Less than or equal MCL
+486   3.450000             Luna    NM  Less than or equal MCL
+487   1.455000          Luzerne    PA  Less than or equal MCL
+488   2.367500         Lycoming    PA  Less than or equal MCL
+492  17.529375           Madera    CA           More than MCL
+494   2.306667          Madison    KY  Less than or equal MCL
+496   1.251000          Madison    NY  Less than or equal MCL
+498   9.988000          Malheur    OR  Less than or equal MCL
+500   2.070000            Marin    CA  Less than or equal MCL
+505   4.169091           Marion    OR  Less than or equal MCL
+506   2.500000           Marion    SC  Less than or equal MCL
+508   2.183333         Mariposa    CA  Less than or equal MCL
+509   2.500000         Marlboro    SC  Less than or equal MCL
+510   1.270000        Marquette    WI  Less than or equal MCL
+516   1.568421            Mason    WA  Less than or equal MCL
+518   2.500000        McCormick    SC  Less than or equal MCL
+519   2.625000        McCracken    KY  Less than or equal MCL
+523   1.150000           McKean    PA  Less than or equal MCL
+524   4.200000         McKinley    NM  Less than or equal MCL
+526   3.417500           McLeod    MN  Less than or equal MCL
+527   1.726667            Meade    KS  Less than or equal MCL
+528   3.586667           Meeker    MN  Less than or equal MCL
+529   1.775000        Mendocino    CA  Less than or equal MCL
+531  11.992222           Merced    CA           More than MCL
+539   1.015789        Middlesex    CT  Less than or equal MCL
+542   4.122500          Millard    UT  Less than or equal MCL
+545   4.300000          Mineral    CO  Less than or equal MCL
+548   8.740000      Mississippi    MO  Less than or equal MCL
+550   4.426667         Mitchell    KS  Less than or equal MCL
+551   4.300000            Modoc    CA  Less than or equal MCL
+553   1.650000         Moniteau    MO  Less than or equal MCL
+555  31.837500             Mono    CA           More than MCL
+556   2.400000           Monona    IA  Less than or equal MCL
+564   5.982712         Monterey    CA  Less than or equal MCL
+570   3.491429       Montgomery    PA  Less than or equal MCL
+576   1.160000           Morgan    MO  Less than or equal MCL
+577   1.745000           Morgan    UT  Less than or equal MCL
+581   1.046667           Morrow    OR  Less than or equal MCL
+582   1.735000           Morton    KS  Less than or equal MCL
+584   2.673333        Multnomah    OR  Less than or equal MCL
+586   1.700000        Muscatine    IA  Less than or equal MCL
+587   4.648571             Napa    CA  Less than or equal MCL
+591   1.300000           Nemaha    KS  Less than or equal MCL
+593   3.600000             Ness    KS  Less than or equal MCL
+594   2.949091           Nevada    CA  Less than or equal MCL
+597   3.095714       New Madrid    MO  Less than or equal MCL
+599   2.500000         Newberry    SC  Less than or equal MCL
+605   1.290000          Nodaway    MO  Less than or equal MCL
+606   5.190000           Norman    MN  Less than or equal MCL
+608   1.875000   Northumberland    PA  Less than or equal MCL
+609   6.036667           Norton    KS  Less than or equal MCL
+611   2.500000           Oconee    SC  Less than or equal MCL
+612   6.580000           Oconto    WI  Less than or equal MCL
+613   1.833333             Ohio    KY  Less than or equal MCL
+616   4.751667         Okanogan    WA  Less than or equal MCL
+617   2.100000       Okeechobee    FL  Less than or equal MCL
+619   1.956250           Oneida    NY  Less than or equal MCL
+620   2.504444         Onondaga    NY  Less than or equal MCL
+622   1.737778           Orange    CA  Less than or equal MCL
+623   5.470000           Orange    FL  Less than or equal MCL
+625   2.500000       Orangeburg    SC  Less than or equal MCL
+628   4.221667          Orleans    VT  Less than or equal MCL
+630   2.500000          Osborne    KS  Less than or equal MCL
+631   1.100000          Osceola    FL  Less than or equal MCL
+632   1.650000          Osceola    IA  Less than or equal MCL
+633   1.288947           Oswego    NY  Less than or equal MCL
+636   1.113333           Otsego    NY  Less than or equal MCL
+637   6.533333       Otter Tail    MN  Less than or equal MCL
+644   4.400000          Pacific    WA  Less than or equal MCL
+646   5.250000        Palo Alto    IA  Less than or equal MCL
+648   1.057500            Pasco    FL  Less than or equal MCL
+652   5.813333     Pend Oreille    WA  Less than or equal MCL
+655   3.063846        Penobscot    ME  Less than or equal MCL
+658   4.571818            Perry    PA  Less than or equal MCL
+662   6.625000         Phillips    CO  Less than or equal MCL
+663   2.500000          Pickens    SC  Less than or equal MCL
+664   2.638310           Pierce    WA  Less than or equal MCL
+669   1.324000             Pine    MN  Less than or equal MCL
+670   1.117500         Pinellas    FL  Less than or equal MCL
+671   4.907500      Piscataquis    ME  Less than or equal MCL
+673   3.542500            Piute    UT  Less than or equal MCL
+676   4.477500           Plumas    CA  Less than or equal MCL
+678   9.000000       Pocahontas    IA  Less than or equal MCL
+681   1.100000             Polk    IA  Less than or equal MCL
+682   7.542500             Polk    MN  Less than or equal MCL
+684   3.021667             Polk    OR  Less than or equal MCL
+685   5.825000             Pope    MN  Less than or equal MCL
+688   2.336667           Potter    PA  Less than or equal MCL
+690   1.456667            Pratt    KS  Less than or equal MCL
+692   1.050000          Prowers    CO  Less than or equal MCL
+699   4.750000             Quay    NM  Less than or equal MCL
+701   2.340000           Ramsey    MN  Less than or equal MCL
+704   6.800000          Rawlins    KS  Less than or equal MCL
+706   4.300000             Reno    KS  Less than or equal MCL
+708   5.100000         Renville    MN  Less than or equal MCL
+710   1.480000             Rice    MN  Less than or equal MCL
+711   2.500000             Rich    UT  Less than or equal MCL
+712   2.500000         Richland    SC  Less than or equal MCL
+713   4.987500       Rio Arriba    NM  Less than or equal MCL
+714   1.250000       Rio Blanco    CO  Less than or equal MCL
+717   2.731935        Riverside    CA  Less than or equal MCL
+719   5.020000             Rock    MN  Less than or equal MCL
+720  10.250000             Rock    WI           More than MCL
+722   1.100000         Rockland    NY  Less than or equal MCL
+723   6.433333        Roosevelt    NM  Less than or equal MCL
+724   6.372500           Roseau    MN  Less than or equal MCL
+727   4.450000             Rush    KS  Less than or equal MCL
+729   5.000000          Russell    KY  Less than or equal MCL
+731   8.202222       Sacramento    CA  Less than or equal MCL
+732   1.120000        Sagadahoc    ME  Less than or equal MCL
+733   2.000000         Saguache    CO  Less than or equal MCL
+736   2.330435        Salt Lake    UT  Less than or equal MCL
+737   2.500000           Saluda    SC  Less than or equal MCL
+738   2.526000       San Benito    CA  Less than or equal MCL
+739   5.283333   San Bernardino    CA  Less than or equal MCL
+740   1.842400        San Diego    CA  Less than or equal MCL
+742   3.559189      San Joaquin    CA  Less than or equal MCL
+745   3.576000         San Juan    UT  Less than or equal MCL
+746   2.872727         San Juan    WA  Less than or equal MCL
+747   3.050417  San Luis Obispo    CA  Less than or equal MCL
+748   1.242857        San Mateo    CA  Less than or equal MCL
+749   2.926667       San Miguel    CO  Less than or equal MCL
+750   3.278571       San Miguel    NM  Less than or equal MCL
+751   5.250714         Sandoval    NM  Less than or equal MCL
+752   3.489375          Sanpete    UT  Less than or equal MCL
+753   2.363846    Santa Barbara    CA  Less than or equal MCL
+755   1.496667       Santa Cruz    CA  Less than or equal MCL
+756   3.796154         Santa Fe    NM  Less than or equal MCL
+758   1.000690         Saratoga    NY  Less than or equal MCL
+762   2.128571        Schoharie    NY  Less than or equal MCL
+763   2.400000         Schuyler    NY  Less than or equal MCL
+765   1.080000         Scotland    MO  Less than or equal MCL
+766   2.881111            Scott    IA  Less than or equal MCL
+767   5.160000            Scott    KS  Less than or equal MCL
+770   2.693750            Scott    MO  Less than or equal MCL
+771   4.986667         Sedgwick    CO  Less than or equal MCL
+772   1.100000         Sedgwick    KS  Less than or equal MCL
+774   1.166667           Seneca    NY  Less than or equal MCL
+775   2.863846           Sevier    UT  Less than or equal MCL
+776   1.637500           Seward    KS  Less than or equal MCL
+778   1.215789           Shasta    CA  Less than or equal MCL
+779   8.000000          Shawano    WI  Less than or equal MCL
+785   1.173333        Sherburne    MN  Less than or equal MCL
+786   1.150000          Sherman    OR  Less than or equal MCL
+787   2.817500           Sibley    MN  Less than or equal MCL
+788   7.490000           Sierra    CA  Less than or equal MCL
+792   1.443333         Siskiyou    CA  Less than or equal MCL
+793   3.546667           Skagit    WA  Less than or equal MCL
+794   1.333333         Skamania    WA  Less than or equal MCL
+795   7.440000            Smith    KS  Less than or equal MCL
+796   3.267879        Snohomish    WA  Less than or equal MCL
+798   7.680000          Socorro    NM  Less than or equal MCL
+799   2.410909           Solano    CA  Less than or equal MCL
+800   1.600000         Somerset    ME  Less than or equal MCL
+802   1.033333         Somerset    PA  Less than or equal MCL
+803   3.161600           Sonoma    CA  Less than or equal MCL
+804   2.500000      Spartanburg    SC  Less than or equal MCL
+805   2.078276          Spokane    WA  Less than or equal MCL
+806   7.992500      St. Charles    MO  Less than or equal MCL
+809   1.513636     St. Lawrence    NY  Less than or equal MCL
+812   1.006667         Stafford    KS  Less than or equal MCL
+813   9.046000       Stanislaus    CA  Less than or equal MCL
+815   2.730000   Ste. Genevieve    MO  Less than or equal MCL
+816   1.872500          Stearns    MN  Less than or equal MCL
+818   1.655000          Stevens    KS  Less than or equal MCL
+820   3.767000          Stevens    WA  Less than or equal MCL
+823   2.750000            Story    IA  Less than or equal MCL
+825   1.434483         Sullivan    NY  Less than or equal MCL
+828   1.710455           Summit    UT  Less than or equal MCL
+829   5.965000           Sumner    KS  Less than or equal MCL
+830   1.380000           Sumter    FL  Less than or equal MCL
+831   2.500000           Sumter    SC  Less than or equal MCL
+834   7.332500           Sutter    CA  Less than or equal MCL
+835   2.345000            Swift    MN  Less than or equal MCL
+837   1.226429             Taos    NM  Less than or equal MCL
+840   3.114074           Tehama    CA  Less than or equal MCL
+843   1.103462         Thurston    WA  Less than or equal MCL
+844   2.687500        Tillamook    OR  Less than or equal MCL
+845   1.250000            Tioga    NY  Less than or equal MCL
+846   1.882000            Tioga    PA  Less than or equal MCL
+850   1.034615         Tompkins    NY  Less than or equal MCL
+851   1.877778           Tooele    UT  Less than or equal MCL
+852   1.642857         Torrance    NM  Less than or equal MCL
+853   4.110000         Traverse    MN  Less than or equal MCL
+855   1.750000          Trinity    CA  Less than or equal MCL
+857   2.981034           Tulare    CA  Less than or equal MCL
+858   1.344583         Tuolumne    CA  Less than or equal MCL
+861   1.123256           Ulster    NY  Less than or equal MCL
+862   1.500000         Umatilla    OR  Less than or equal MCL
+864   1.650000            Union    NJ  Less than or equal MCL
+865   2.000000            Union    NM  Less than or equal MCL
+866   1.335000            Union    OR  Less than or equal MCL
+868   2.500000            Union    SC  Less than or equal MCL
+870   1.663548             Utah    UT  Less than or equal MCL
+871   5.535625         Valencia    NM  Less than or equal MCL
+873   1.285714          Ventura    CA  Less than or equal MCL
+876   1.050000        Wabaunsee    KS  Less than or equal MCL
+877   1.068000            Waldo    ME  Less than or equal MCL
+878   2.833750      Walla Walla    WA  Less than or equal MCL
+880   4.343333         Walworth    WI  Less than or equal MCL
+882   5.000000           Warren    KY  Less than or equal MCL
+885   3.550000           Warren    PA  Less than or equal MCL
+886   1.099231          Wasatch    UT  Less than or equal MCL
+887   3.001667            Wasco    OR  Less than or equal MCL
+888   5.645000       Washington    CO  Less than or equal MCL
+889   9.000000       Washington    IA  Less than or equal MCL
+891   1.921250       Washington    ME  Less than or equal MCL
+895   1.916667       Washington    OR  Less than or equal MCL
+897   3.589200       Washington    UT  Less than or equal MCL
+900   5.450000          Waupaca    WI  Less than or equal MCL
+905   6.081667            Wayne    UT  Less than or equal MCL
+907   1.313333            Weber    UT  Less than or equal MCL
+916   3.174231          Whatcom    WA  Less than or equal MCL
+919   4.300000          Wichita    KS  Less than or equal MCL
+920   2.500000     Williamsburg    SC  Less than or equal MCL
+922   1.808966          Windham    CT  Less than or equal MCL
+925   1.500000        Winnebago    IA  Less than or equal MCL
+930   1.200000             Wood    WI  Less than or equal MCL
+935   2.350000            Worth    IA  Less than or equal MCL
+936   2.166667           Wright    IA  Less than or equal MCL
+937   2.400000           Wright    MN  Less than or equal MCL
+941   5.500000          Wyoming    PA  Less than or equal MCL
+943   3.412895           Yakima    WA  Less than or equal MCL
+944   2.111111          Yamhill    OR  Less than or equal MCL
+947   2.563333             Yolo    CA  Less than or equal MCL
+948   2.782917             York    ME  Less than or equal MCL
+949   3.172857             York    PA  Less than or equal MCL
+950   2.500000             York    SC  Less than or equal MCL
+951   3.680000             Yuba    CA  Less than or equal MCL
+952   8.493333             Yuma    CO  Less than or equal MCL

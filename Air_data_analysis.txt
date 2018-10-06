@@ -1,0 +1,502 @@
+
+Overall review of dataset:
+                                      count         mean         std     min     25%     50%     75%      max
+Year                                 7455.0  2013.982160    2.006250  2011.0  2012.0  2014.0  2016.0   2017.0
+Days with AQI                        7455.0   310.777465   88.042302     1.0   272.5   362.0   365.0    366.0
+Good Days                            7455.0   241.422669   81.363355     0.0   190.0   258.0   307.0    366.0
+Moderate Days                        7455.0    63.379343   51.129005     0.0    24.0    51.0    92.0    315.0
+Unhealthy for Sensitive Groups Days  7455.0     4.936016   11.598613     0.0     0.0     1.0     5.0    153.0
+Unhealthy Days                       7455.0     0.933467    6.119254     0.0     0.0     0.0     0.0    221.0
+Very Unhealthy Days                  7455.0     0.064252    0.594021     0.0     0.0     0.0     0.0     23.0
+Hazardous Days                       7455.0     0.018511    0.267516     0.0     0.0     0.0     0.0     15.0
+Max AQI                              7455.0   124.859960  213.701730     0.0    88.0   108.0   142.0  13276.0
+90th Percentile AQI                  7455.0    59.948357   19.698455     0.0    50.0    58.0    67.0    200.0
+Median AQI                           7455.0    36.676459   12.232990     0.0    33.0    38.0    43.0    171.0
+Days CO                              7455.0     0.710127   11.064005     0.0     0.0     0.0     0.0    354.0
+Days NO2                             7455.0     5.311469   21.852473     0.0     0.0     0.0     0.0    357.0
+Days Ozone                           7455.0   168.058350  119.532926     0.0     0.0   185.0   245.0    366.0
+Days SO2                             7455.0    13.517639   56.426739     0.0     0.0     0.0     0.0    366.0
+Days PM2.5                           7455.0   109.956808  109.198103     0.0     0.0    90.0   181.0    366.0
+Days PM10                            7455.0    13.223072   52.296932     0.0     0.0     0.0     0.0    366.0
+
+Size of the dataframe is (7455, 19).
+
+There are 141645 elements in this dataset.
+
+Data types of each columns are
+ State                                  object
+County                                 object
+Year                                    int64
+Days with AQI                           int64
+Good Days                               int64
+Moderate Days                           int64
+Unhealthy for Sensitive Groups Days     int64
+Unhealthy Days                          int64
+Very Unhealthy Days                     int64
+Hazardous Days                          int64
+Max AQI                                 int64
+90th Percentile AQI                     int64
+Median AQI                              int64
+Days CO                                 int64
+Days NO2                                int64
+Days Ozone                              int64
+Days SO2                                int64
+Days PM2.5                              int64
+Days PM10                               int64
+dtype: object
+
+
+The total number of rows with null values is: 
+0.
+
+Count of missing value for each column:
+State                                  0
+County                                 0
+Year                                   0
+Days with AQI                          0
+Good Days                              0
+Moderate Days                          0
+Unhealthy for Sensitive Groups Days    0
+Unhealthy Days                         0
+Very Unhealthy Days                    0
+Hazardous Days                         0
+Max AQI                                0
+90th Percentile AQI                    0
+Median AQI                             0
+Days CO                                0
+Days NO2                               0
+Days Ozone                             0
+Days SO2                               0
+Days PM2.5                             0
+Days PM10                              0
+
+The unique values for  " State" are ['Alabama' 'Alaska' 'Arizona' 'Arkansas' 'California' 'Colorado'
+ 'Connecticut' 'Country Of Mexico' 'Delaware' 'District Of Columbia'
+ 'Florida' 'Georgia' 'Hawaii' 'Idaho' 'Illinois' 'Indiana' 'Iowa' 'Kansas'
+ 'Kentucky' 'Louisiana' 'Maine' 'Maryland' 'Massachusetts' 'Michigan'
+ 'Minnesota' 'Mississippi' 'Missouri' 'Montana' 'Nebraska' 'Nevada'
+ 'New Hampshire' 'New Jersey' 'New Mexico' 'New York' 'North Carolina'
+ 'North Dakota' 'Ohio' 'Oklahoma' 'Oregon' 'Pennsylvania' 'Puerto Rico'
+ 'Rhode Island' 'South Carolina' 'South Dakota' 'Tennessee' 'Texas' 'Utah'
+ 'Vermont' 'Virgin Islands' 'Virginia' 'Washington' 'West Virginia'
+ 'Wisconsin' 'Wyoming'].
+
+
+
+The unique values for  " County" are ['Baldwin' 'Clay' 'Colbert' 'DeKalb' 'Elmore' 'Etowah' 'Houston'
+ 'Jefferson' 'Lawrence' 'Madison' 'Mobile' 'Montgomery' 'Morgan' 'Russell'
+ 'Shelby' 'Sumter' 'Talladega' 'Tuscaloosa' 'Aleutians East ' 'Anchorage '
+ 'Denali ' 'Fairbanks North Star ' 'Juneau ' 'Kenai Peninsula '
+ 'Matanuska-Susitna ' 'Apache' 'Cochise' 'Coconino' 'Gila' 'La Paz'
+ 'Maricopa' 'Mohave' 'Navajo' 'Pima' 'Pinal' 'Santa Cruz' 'Yavapai' 'Yuma'
+ 'Arkansas' 'Ashley' 'Clark' 'Crittenden' 'Garland' 'Jackson' 'Newton'
+ 'Polk' 'Pulaski' 'Union' 'Washington' 'Alameda' 'Amador' 'Butte'
+ 'Calaveras' 'Colusa' 'Contra Costa' 'Del Norte' 'El Dorado' 'Fresno'
+ 'Glenn' 'Humboldt' 'Imperial' 'Inyo' 'Kern' 'Kings' 'Lake' 'Los Angeles'
+ 'Madera' 'Marin' 'Mariposa' 'Mendocino' 'Merced' 'Mono' 'Monterey' 'Napa'
+ 'Nevada' 'Orange' 'Placer' 'Plumas' 'Riverside' 'Sacramento' 'San Benito'
+ 'San Bernardino' 'San Diego' 'San Francisco' 'San Joaquin'
+ 'San Luis Obispo' 'San Mateo' 'Santa Barbara' 'Santa Clara' 'Shasta'
+ 'Siskiyou' 'Solano' 'Sonoma' 'Stanislaus' 'Sutter' 'Tehama' 'Trinity'
+ 'Tulare' 'Tuolumne' 'Ventura' 'Yolo' 'Adams' 'Alamosa' 'Arapahoe'
+ 'Archuleta' 'Boulder' 'Clear Creek' 'Delta' 'Denver' 'Douglas' 'El Paso'
+ 'Fremont' 'Garfield' 'Gunnison' 'La Plata' 'Larimer' 'Mesa' 'Moffat'
+ 'Montezuma' 'Montrose' 'Park' 'Pitkin' 'Prowers' 'Pueblo' 'Rio Blanco'
+ 'Routt' 'San Juan' 'San Miguel' 'Weld' 'Fairfield' 'Hartford'
+ 'Litchfield' 'Middlesex' 'New Haven' 'New London' 'Tolland' 'Windham'
+ 'BAJA CALIFORNIA NORTE' 'SONORA' 'Kent' 'New Castle' 'Sussex'
+ 'District of Columbia' 'Alachua' 'Baker' 'Bay' 'Brevard' 'Broward'
+ 'Citrus' 'Collier' 'Columbia' 'Duval' 'Escambia' 'Flagler' 'Hamilton'
+ 'Highlands' 'Hillsborough' 'Holmes' 'Indian River' 'Lee' 'Leon' 'Liberty'
+ 'Manatee' 'Marion' 'Martin' 'Miami-Dade' 'Nassau' 'Okaloosa' 'Osceola'
+ 'Palm Beach' 'Pasco' 'Pinellas' 'Putnam' 'Santa Rosa' 'Sarasota'
+ 'Seminole' 'St. Lucie' 'Volusia' 'Wakulla' 'Bibb' 'Charlton' 'Chatham'
+ 'Chattooga' 'Clarke' 'Clayton' 'Cobb' 'Coffee' 'Coweta' 'Dawson'
+ 'Dougherty' 'Floyd' 'Fulton' 'Glynn' 'Gwinnett' 'Hall' 'Henry' 'Lowndes'
+ 'Murray' 'Muscogee' 'Paulding' 'Pike' 'Richmond' 'Rockdale' 'Walker'
+ 'Hawaii' 'Honolulu' 'Kauai' 'Maui' 'Ada' 'Bannock' 'Benewah' 'Blaine'
+ 'Boise' 'Bonner' 'Bonneville' 'Canyon' 'Caribou' 'Custer' 'Franklin'
+ 'Idaho' 'Jerome' 'Kootenai' 'Latah' 'Lemhi' 'Nez Perce' 'Shoshone'
+ 'Twin Falls' 'Valley' 'Champaign' 'Cook' 'DuPage' 'Effingham' 'Jersey'
+ 'Jo Daviess' 'Kane' 'La Salle' 'Macon' 'Macoupin' 'McHenry' 'McLean'
+ 'Monroe' 'Peoria' 'Randolph' 'Rock Island' 'Saint Clair' 'Sangamon'
+ 'Tazewell' 'Wabash' 'Will' 'Winnebago' 'Allen' 'Bartholomew' 'Boone'
+ 'Brown' 'Carroll' 'Daviess' 'Delaware' 'Dubois' 'Elkhart' 'Gibson'
+ 'Greene' 'Hendricks' 'Howard' 'Huntington' 'Johnson' 'Knox' 'LaPorte'
+ 'Perry' 'Porter' 'Posey' 'Spencer' 'St. Joseph' 'Sullivan' 'Tippecanoe'
+ 'Vanderburgh' 'Vigo' 'Warrick' 'Whitley' 'Black Hawk' 'Bremer'
+ 'Cerro Gordo' 'Clinton' 'Harrison' 'Linn' 'Muscatine' 'Palo Alto'
+ 'Pottawattamie' 'Scott' 'Van Buren' 'Warren' 'Woodbury' 'Chase' 'Ford'
+ 'Leavenworth' 'Neosho' 'Sedgwick' 'Shawnee' 'Sherman' 'Sumner' 'Trego'
+ 'Wyandotte' 'Bell' 'Boyd' 'Bullitt' 'Campbell' 'Carter' 'Christian'
+ 'Edmonson' 'Fayette' 'Greenup' 'Hancock' 'Hardin' 'Henderson' 'Jessamine'
+ 'Livingston' 'McCracken' 'Oldham' 'Simpson' 'Trigg' 'Ascension' 'Bossier'
+ 'Caddo' 'Calcasieu' 'East Baton Rouge' 'Iberville' 'Lafayette'
+ 'Lafourche' 'Orleans' 'Ouachita' 'Pointe Coupee' 'Rapides' 'St. Bernard'
+ 'St. Charles' 'St. James' 'St. John the Baptist' 'St. Martin'
+ 'St. Tammany' 'Tangipahoa' 'Terrebonne' 'West Baton Rouge' 'Androscoggin'
+ 'Aroostook' 'Cumberland' 'Kennebec' 'Oxford' 'Penobscot' 'York'
+ 'Allegany' 'Anne Arundel' 'Baltimore' 'Baltimore (City)' 'Calvert'
+ 'Cecil' 'Charles' 'Dorchester' 'Frederick' 'Garrett' 'Harford'
+ "Prince George's" 'Barnstable' 'Berkshire' 'Bristol' 'Dukes' 'Essex'
+ 'Hampden' 'Hampshire' 'Norfolk' 'Plymouth' 'Suffolk' 'Worcester'
+ 'Allegan' 'Benzie' 'Berrien' 'Cass' 'Chippewa' 'Genesee' 'Huron' 'Ingham'
+ 'Kalamazoo' 'Keweenaw' 'Lenawee' 'Macomb' 'Manistee' 'Mason' 'Missaukee'
+ 'Muskegon' 'Oakland' 'Ottawa' 'Schoolcraft' 'St. Clair' 'Tuscola'
+ 'Washtenaw' 'Wayne' 'Wexford' 'Anoka' 'Becker' 'Beltrami' 'Carlton'
+ 'Crow Wing' 'Dakota' 'Goodhue' 'Hennepin' 'Lyon' 'Mille Lacs' 'Olmsted'
+ 'Ramsey' 'Saint Louis' 'Stearns' 'Winona' 'Wright' 'Bolivar' 'DeSoto'
+ 'Forrest' 'Grenada' 'Hinds' 'Lauderdale' 'Yalobusha' 'Andrew' 'Buchanan'
+ 'Callaway' 'Cedar' 'Iron' 'Jasper' 'Lincoln' 'New Madrid' 'Saint Charles'
+ 'Sainte Genevieve' 'St. Louis City' 'Stoddard' 'Taney' 'Cascade' 'Fergus'
+ 'Flathead' 'Gallatin' 'Lewis and Clark' 'Missoula' 'Phillips'
+ 'Powder River' 'Powell' 'Ravalli' 'Richland' 'Roosevelt' 'Rosebud'
+ 'Sanders' 'Sheridan' 'Silver Bow' 'Yellowstone' 'Lancaster' 'Sarpy'
+ 'Scotts Bluff' 'Thomas' 'Carson City' 'Churchill' 'Elko' 'Nye' 'Washoe'
+ 'White Pine' 'Belknap' 'Cheshire' 'Coos' 'Grafton' 'Merrimack'
+ 'Rockingham' 'Atlantic' 'Bergen' 'Camden' 'Gloucester' 'Hudson'
+ 'Hunterdon' 'Mercer' 'Monmouth' 'Morris' 'Ocean' 'Passaic' 'Bernalillo'
+ 'Catron' 'Chaves' 'Dona Ana' 'Eddy' 'Lea' 'Los Alamos' 'Luna'
+ 'Rio Arriba' 'Sandoval' 'Santa Fe' 'Socorro' 'Taos' 'Valencia' 'Albany'
+ 'Bronx' 'Chautauqua' 'Dutchess' 'Erie' 'Herkimer' 'New York' 'Niagara'
+ 'Oneida' 'Onondaga' 'Oswego' 'Queens' 'Rockland' 'Saratoga' 'Seneca'
+ 'St. Lawrence' 'Steuben' 'Tompkins' 'Westchester' 'Alexander' 'Avery'
+ 'Beaufort' 'Brunswick' 'Buncombe' 'Caldwell' 'Carteret' 'Caswell'
+ 'Catawba' 'Davidson' 'Durham' 'Edgecombe' 'Forsyth' 'Graham' 'Granville'
+ 'Guilford' 'Haywood' 'Hyde' 'Johnston' 'Lenoir' 'Mecklenburg' 'Mitchell'
+ 'New Hanover' 'Person' 'Pitt' 'Rowan' 'Swain' 'Wake' 'Yancey' 'Billings'
+ 'Burke' 'Burleigh' 'Dunn' 'McKenzie' 'Oliver' 'Stutsman' 'Ward'
+ 'Williams' 'Ashtabula' 'Athens' 'Belmont' 'Butler' 'Clermont'
+ 'Columbiana' 'Cuyahoga' 'Gallia' 'Geauga' 'Licking' 'Lorain' 'Lucas'
+ 'Mahoning' 'Medina' 'Miami' 'Noble' 'Portage' 'Preble' 'Scioto' 'Stark'
+ 'Summit' 'Trumbull' 'Wood' 'Adair' 'Bryan' 'Canadian' 'Cherokee'
+ 'Choctaw' 'Cleveland' 'Comanche' 'Creek' 'Dewey' 'Grady' 'Kay' 'Love'
+ 'Mayes' 'McClain' 'Muskogee' 'Oklahoma' 'Osage' 'Pittsburg' 'Sequoyah'
+ 'Tulsa' 'Benton' 'Clackamas' 'Crook' 'Deschutes' 'Grant' 'Harney'
+ 'Josephine' 'Klamath' 'Lane' 'Multnomah' 'Umatilla' 'Wallowa' 'Wasco'
+ 'Allegheny' 'Armstrong' 'Beaver' 'Berks' 'Blair' 'Bradford' 'Bucks'
+ 'Cambria' 'Centre' 'Chester' 'Clearfield' 'Dauphin' 'Elk' 'Indiana'
+ 'Lackawanna' 'Lebanon' 'Lehigh' 'Luzerne' 'Lycoming' 'Northampton'
+ 'Philadelphia' 'Somerset' 'Tioga' 'Westmoreland' 'Adjuntas' 'Bayamon'
+ 'Caguas' 'Catano' 'Fajardo' 'Guayama' 'Guayanilla' 'Guaynabo' 'Juncos'
+ 'Ponce' 'Salinas' 'Providence' 'Abbeville' 'Aiken' 'Anderson' 'Berkeley'
+ 'Charleston' 'Chesterfield' 'Colleton' 'Darlington' 'Edgefield'
+ 'Florence' 'Georgetown' 'Greenville' 'Horry' 'Lexington' 'Oconee'
+ 'Pickens' 'Spartanburg' 'Brookings' 'Codington' 'Hughes' 'Meade'
+ 'Minnehaha' 'Pennington' 'Blount' 'Claiborne' 'Dyer' 'Loudon' 'Maury'
+ 'McMinn' 'Roane' 'Sevier' 'Williamson' 'Wilson' 'Bexar' 'Bowie'
+ 'Brazoria' 'Brewster' 'Cameron' 'Collin' 'Culberson' 'Dallas' 'Denton'
+ 'Ector' 'Ellis' 'Freestone' 'Galveston' 'Gregg' 'Harris' 'Hidalgo' 'Hood'
+ 'Hunt' 'Hutchinson' 'Kaufman' 'Kleberg' 'Lubbock' 'Maverick' 'McLennan'
+ 'Milam' 'Navarro' 'Nueces' 'Parker' 'Potter' 'Randall' 'Robertson'
+ 'Rockwall' 'Rusk' 'Smith' 'Tarrant' 'Titus' 'Travis' 'Victoria' 'Webb'
+ 'Box Elder' 'Cache' 'Carbon' 'Davis' 'Duchesne' 'Salt Lake' 'Tooele'
+ 'Uintah' 'Utah' 'Weber' 'Bennington' 'Chittenden' 'Rutland' 'St Croix'
+ 'St John' 'Albemarle' 'Alexandria City' 'Arlington' 'Botetourt'
+ 'Bristol City' 'Caroline' 'Covington City' 'Fairfax' 'Fauquier'
+ 'Fredericksburg City' 'Giles' 'Hampton City' 'Hanover' 'Henrico'
+ 'Hopewell City' 'Loudoun' 'Lynchburg City' 'Norfolk City' 'Prince Edward'
+ 'Prince William' 'Richmond City' 'Roanoke' 'Rockbridge' 'Salem City'
+ 'Stafford' 'Suffolk City' 'Virginia Beach City' 'Winchester City' 'Wythe'
+ 'Asotin' 'Chelan' 'Clallam' 'Cowlitz' 'Grays Harbor' 'King' 'Kitsap'
+ 'Kittitas' 'Klickitat' 'Lewis' 'Okanogan' 'Pierce' 'Skagit' 'Snohomish'
+ 'Spokane' 'Stevens' 'Thurston' 'Walla Walla' 'Whatcom' 'Whitman' 'Yakima'
+ 'Brooke' 'Cabell' 'Gilmer' 'Greenbrier' 'Kanawha' 'Marshall' 'Mineral'
+ 'Monongalia' 'Ohio' 'Tucker' 'Ashland' 'Dane' 'Dodge' 'Door' 'Eau Claire'
+ 'Fond du Lac' 'Forest' 'Kenosha' 'Kewaunee' 'La Crosse' 'Manitowoc'
+ 'Marathon' 'Milwaukee' 'Outagamie' 'Ozaukee' 'Racine' 'Rock' 'Sauk'
+ 'Sheboygan' 'Taylor' 'Vilas' 'Walworth' 'Waukesha' 'Big Horn' 'Converse'
+ 'Laramie' 'Natrona' 'Platte' 'Sublette' 'Sweetwater' 'Teton' 'Uinta'
+ 'Weston' 'Alpine' 'Chaffee' 'Grand' 'Wilkinson' 'Fountain' 'Story'
+ 'Meigs' 'Cotton' 'King William' 'Goshen' 'Yukon-Koyukuk ' 'Sagadahoc'
+ 'Garden' 'Alamance' 'Duplin' 'Gaston' 'McDowell' 'Watauga' 'Page'
+ 'Raleigh' 'CHIHUAHUA STATE' 'Davie' 'Robeson' 'Humacao' 'Mayagnez'
+ 'Wichita' 'Daggett' 'Riley' 'McKinley' 'Pottawatomie' 'Roanoke City'
+ 'Barron' 'Trempealeau' 'Faulkner' 'Pope' 'Jones' 'Chemung' 'Rensselaer'
+ 'Ulster' 'Tuscarawas' 'McCurtain' 'Bradley' 'Rutherford' 'Culpeper'
+ 'Sebastian' 'White' 'Elbert' 'Cassia' 'Tama' 'Piscataquis' 'Schenectady'
+ 'Yamhill' 'Gillespie' 'Hays' 'Pend Oreille'].
+
+
+
+The unique values for  " Year" are [2017 2016 2015 2014 2013 2012 2011].
+
+
+
+The unique values for  " Days with AQI" are [270 118 283 359 226 360 281 365  51 336 363 346 364 311 353 350 116 356
+  13 358 355 328 113 121 122 362 354 277 351 205 184 357 306 115  39  49
+ 349 343 361 120 125 342  50 207 348 211 209 352 334 302 347 339  47 240
+ 284 104 245 316 242 231 276 254 327 331 238  11 243 241 315 220 338 288
+ 244 309 324 233 232 280 282 237 341 229 264 332  54 111 127 105 236 263
+ 223 285 259 107 215 344 224 265 307 323 103 278 345  31 308 298 258 299
+  48 319 326 249 293 291 227 256 304 303 202 330  59 294 310 271 305  94
+ 246  17 186  92 335 221 222 253  44 172 235 195 230   9 269 248 274 273
+ 198 234 296  62 337 340 192  30 176  46  26  45  60  61 114 112 333 183
+ 239 279 117 366 257 119  24 177 167 204 151  52 152 128 174 268 329  43
+ 275 199 214 203 295 181 138 182 175 325 180 213 212 137  58 261 286 260
+  97 102 267 170 178 109  12  87 266 108  74 193 187 247 218 194 262 312
+ 196 136  96 110  20 225  28 153 322  42  73  29 208 255  95 188 189 201
+ 197  57 314  40  83 300 320 132  68 100  64 141 124 129  56 321 317 191
+  22 210 179  65 206  98 272 318  36 135  86  84 287  91 200 168 217  38
+ 251  25 185 126 150 173 149   1  41 290  88 216 106 219  82  27 147 250
+   8 139  32 145  34 301 123  89 292 289  93  81  99 101 169  63 190  37
+  69 133 171 148 252 228  55  77 313 131 166   7  15 161 162  90 165 297
+  14  18  67 130   5].
+
+
+
+The unique values for  " Good Days" are [241 104 265 329 221 233 260 144  46 302 299 214 317 228 330  92 165  51
+ 313 359 239 311  13 309 364 254 264  69 276 349 279 145  64 219  99 108
+ 345 280 352 324 252 266 256 189 291 152 169 268 222 255 235 102 284 315
+ 112 204  76  95 350  38 142 296 191 273 162 306 304 229 200 148 210  52
+ 158 298  31  83 185 143 294 247 240 312 263 190 244 156 181 262  93 231
+ 164 206 351 224 172 114 183  39 297 281  49 196 282 269 120 347 333  50
+ 118 213 267 171 287 188 334 184 303 179 316 339 275 290 288 318 319 261
+ 300 274 335 325 283 289 295 346 322  43 232 314  84  98 250 272 249 257
+ 270  10 212 103   6 342 362 355 234 271 203 323 337  47 321 242 220 286
+ 211 237 338 217 277 285 258 305 357 207 358 238 105 301 227 216 365 209
+  94 226 293 176  91 225  48 360 340 344 243 208 253 248 354 259 236 332
+ 307 326 343  97 109 292 331 348 205 327 199 201 341 198 310 202 328 230
+ 245 363 308 361 111 107 113 278 136 353 170 131 320 155  56 192 223  17
+  58 246 161 215  41 130  37 166 194   9 117 197 218  45  61 336  29 134
+ 195  22 101  60  11 110 356 106  59 154 251 100  54 116 122  70  85  32
+ 123 150  44 187  28 138 177 147  80 173 115 126 121 125 366  40 174   1
+ 175 146 140 153 127  87  96 167 151 128 163 157 182 159  12 193 119  90
+ 186  20  24  42  73 160  86  82  88  26 168  68  35  65  57 137   8 149
+   2  21 141  62 180 178 139  33 135  75  89  19  25  74  23  72  55 132
+  27  53  66  34  77   3  71  81  78  18 129   0 133 124  36  79   4  15
+  63  67  14   5].
+
+
+
+The unique values for  " Moderate Days" are [ 28  14  18  30   5 125  20 212  34  59 129  47  83  23  24 184   0  51
+  81  44   1 108 100 155  80 259   6  85 213 233  82 104 110  13  84  17
+  12  38 112  99 109 162  67 189 171 131  22  96 143  74  40 136 150 197
+  10 207 175  61 141 168  35  60 121 185 105 172  65 186 220 147 214  64
+ 113  49  88  11 111 146  94  90 145 106  93 157   2 134 180 140 123 101
+  89   3   9 144  66  57  58 182  39  16  62  37  77  33  76  48  15  27
+  95  42  56  86  92  75  31  19  54   4   8  46  32  45  52 114 116 149
+  73  87  63  26 120  78  29  72  21 139  79  50  25  41  98 142 124 209
+  70  71 188  91  68 107 117  69 126 118   7  43  53  55 187  36 137 133
+ 181 200 159 127 191  97 170 128 115 166 173 152 138 119 156 183 164 178
+ 163 151 102 103 148 270 161 237 169 216 230 193 201 255 202 176 122 153
+ 215 130 165 244 132 236 199 205 218 190 217 177 251 160 167 198 135 179
+ 174 279 265 203 234 195 158 261 228 225 229 240 224 221 269 194 243 211
+ 272 210 247 208 154 262 241 219 252 223 315 196 254 192 227 250 275 204
+ 246].
+
+
+
+The unique values for  " Unhealthy for Sensitive Groups Days" are [  1   0   9   5   2  25   4   3 120  50   7  59  12  23   6   8  31  93
+  36  16 115  52  74  42  62  30  32  17 100  33  56  55  96  20  11  28
+  46 132  18  13  19  35  24  14  27  10  22  40  58  21  34 119  80  39
+  15 102  71  81  47  86  78  37  38  43 128  26  98  79  60  95  41  29
+ 106  89 153 117  91  45 122  82  53  97 139  90 114 104  75  64  83  54
+ 111 144 134  61  69  92  70  44 113  84  67  48  51  76  63  57 136  49
+  66].
+
+
+
+The unique values for  " Unhealthy Days" are [  0   1  20  21   5   7   2   4  26   3  24  38   6   8  19  43  51   9
+  31 167  12  14  15  10  23  27  25  37  48  22  11 181  40  29  28  36
+  32 148  46  17  33  42  44 129  49 159  16  41  35  53 221  13  50  57
+  55 135].
+
+
+
+The unique values for  " Very Unhealthy Days" are [ 0  1  8  4  2  6 23  3  5 17 12 19 10  9  7].
+
+
+
+The unique values for  " Hazardous Days" are [ 0  1  2  3 15  4  5].
+
+
+
+The unique values for  " Max AQI" are [  108    66    63    80    58   163   131   129   100   139   221    87
+   103    83    70   123    26   105    49   180    16   155    51   200
+   167    86   101   122   365   186   119   235    74   140    67    61
+    97   115    91    81   205   136   154   172   193   169    96   147
+   207   150   217   331  2060   197   181   166   224   161   179   188
+   158  3439   121   249   185   151   156   366   164   117   233   174
+   146   133   281   182   130   157   175   165   498   168   143   537
+   153   132    53    93   149    52   128   116    44    18   112    84
+    48    62    19   223    92    90    95    82    89    64    68    78
+    77    99   364   126   277   184   307   162   243   252   269   246
+   261   289   177    54    41    59    27    69   114    43    65    85
+   135    71    60   187   111    98   137    72   159   199    73    88
+   109   102    21   250   152    20   170   216   593   113    15    25
+   350    29   141   142    23   617    30    31   183   110   198    56
+    75   134   138   212   356   218   333   254   380   227   196   253
+   104   127   234    35    33    94    79   160   206    28   190   189
+   178   202   144   192   283   118   208   264   696   107   203  1263
+   191   419    76   541   426   210  6403   176   389   315   271    50
+   194    45   145   148   337   125    42    36   106   195   204    47
+   124   120    57    38   268   349   585    24    40   225    39    55
+    14    34    22   173   238    17   881   266   320  1383   201   215
+  3994    37   299   222    46   226   302   171   247     0   284   485
+   490   231   359   911  2514   240    11   891   455   276   312   902
+   536   425   230  3180   293  1116   408   325   220   280   895   458
+   556    32   213   515   214     8   310   594   274  3812  3868   219
+   465   322   257   286   291  1635   994   546   643   347   278   241
+   565  2212 13276  4782   531   397   346    13   209   786   610   262
+   236].
+
+
+
+The unique values for  " 90th Percentile AQI" are [ 51  52  48  50  45  62  76  55  63  67  16  57  42 115  54  13  58  27
+  71 130  64 108  30  80  61  74  72  53  46  60  59  94  87  65 100 140
+ 104 125  44 156 105  56  66 133  97  89 161 185 112  84  40  82  77  91
+ 147  93  31  33  73  90  28  12  37  49 134  70  47 200  26  36  95  43
+  68  20   8  98  92   7  79  10  14  11  23   9  41 101  17   6 176  75
+ 107  24  69  78  18   1  86  35  38  81  99  96  29 139  21 137  34 123
+ 138 136 154 172 103 145  15 126  39  22  19  85  25   3   4  83  32 153
+ 135 149 146 119 151 102 150 143 141   0 142 148 113 159 114  88 111 131
+ 175 118 122 164 132 124 129 169 110 117 109 155 152 166 116].
+
+
+
+The unique values for  " Median AQI" are [ 36  30  37  39  35  45  55  21  44  31  34  33  52   9  22  38  15   6
+  14  84  43  71  16  53  75  32  47  42  40  49  57  51  46  20  74  61
+  48  70  77  58  54  17  87  56  65  50  27  80  18  19  11   4  41  13
+   5  63  25 146  12  28  24   3  23   1  29  10  26   8   7   0  85  64
+  69  60  59  82  83  66 151 102  79  78  73 136  67  81  97  93 126  89
+ 141  92  94  90 171  68 127  62].
+
+
+
+The unique values for  " Days CO" are [  0   6   2   3   4   1  12   5  65  72 230  13   8  76 310  27  34  10
+  35  38  26 301  20   7   9  58  14  99  52 354  73  79  41  23  11 233
+  46 340  15  57  24  89 200  86 231  17  33  59  44  62  16  43 111 331
+  77 237].
+
+
+
+The unique values for  " Days NO2" are [  0   2  10  20   7  14   1  28  11  21  25   3  47  18  16  48   4 163
+  57  38   6  26   8  53  22  73  15  34  29  12   5  61  19  99  49  39
+ 110   9  90  81  58  46  95  84  83  71 101  96 255  30  94  43  13 157
+ 122  27  92  86  42  17  89 244 126 143  76  33  37  45  91 183  65  31
+  24  23  40  93  88  82 142  69 259  51 286 234  50  32 120 116 254 153
+  60 100  36  68 133 141  35  59 162  80  67 159 108 119  44  55 300 112
+  98 123 252 151 111  77 102  66  52 124 174  63 256 220 150 262  97  56
+  72  87 104 140 114 132 148 182 115 203  62 118 109 107 200 184 195 180
+ 127 216 152 357 155 106  79  54 160 187 231 270 103 348 113].
+
+
+
+The unique values for  " Days Ozone" are [206   0 218 315 226 133 203  85 230 191 119 184 173 232 183  64 358 111
+ 221 302 365  93 342 350 207 328 209 181 362 324 152 180 110 200 138 330
+ 235 257 170 288 253 199 169 242 144 266 185 213 113 353 202 300 234 204
+ 334 219 131 198 211 164 254 201 228 355 141 249 172 236 250 269 329 306
+ 325 356 339 349 343 344 332 174 157 313 222 277 136 217 243 126 225 196
+ 214 359 192 124 364 363 147 348 195 210 270 194 163 100 240 188 245 149
+ 231 114 215 186 216 151 357 160 241 338 189 244 248 162 145 299 132 212
+ 159 285 279 311 233 317 155 227 237 182 128 197 229 239 220  48 116  63
+ 148 105 284 361 336 333 177 223 117  94 150 327 130 351 261 278 109 135
+ 208 224 289 310 347 268 255 175 316 272 295 263 326 265  61 280 238 346
+ 323 193  55 134 142 187 166  52 294 281 309 273 354 287 282 139 171 104
+ 258 247 167 319  87 312 305 262 360 161 283 292 341 168 178 290 298 271
+ 205 246 118   2 127 108 121 140 335 264  43  83 190   9 267 274 291 179
+ 307 251 275 143 337  65 340 260 320  96 123 115 293 345 276 321 176  82
+ 352 308 366 154 259 112 286 158 303 146 103  30 314 156 120  71 137 125
+  79  91  88 106 297 331 296 256  51 165  50  70 153 129  76  84 322 107
+  74 122  97 304  92  86  95  57  69 318  81  98  10  68  77  89  59  73
+  53  40  72  38  45   1  80  62 102 101  75  90  44 301  54 252  37  99
+  78  56  36   8  33  31  60  66  16].
+
+
+
+The unique values for  " Days SO2" are [  0  70   5 121 256   1   2  15   6   9  83  19  35  63  10 356  42  26
+  86 339 365 146 120 364 357 358 363 134  22   8 114   3 140  45 103  18
+ 349 354 241  49  30  12   7 361 122  11  33  27  84 214  50   4  14 362
+  60 173  59 123  23  36  47 304  28 353  78  25  16 128 235 119 168  62
+ 340 348  37  53 111 355 165 185 126  48 308  80  43  76 263 246  40  57
+  32 350  29 159 245 351 175 366 183 239  65 249 200  20 254 151 344  74
+  64  34 153 305 187  38  17 100 303  13 137 149  73  24 130  99  79  56
+ 102 248 253  44 104 152 107 352 194  81 244 125  51 136 210 188  85  98
+ 347  31 157 189 306 359 147 164  96  21 109 238 113  91 336 144 108 334
+ 196  54 242  39  72  97 180  71  55 360 116 312  94 337  93  69 131  52
+ 163 176  46 240  89  61 335 342 124 203  68 112 237 207  41 154 292  67
+  82  58 251 142 193  77 118 129 156 345 186 309 178 315 192 338 311 331
+ 228 110 280 215 333  92  66 167 346 172 174 223 307 266  88 106 273 226].
+
+
+
+The unique values for  " Days PM2.5" are [ 64 118  65  44   0 227  78 207  51  52 167 180 138 116 286 208   1 244
+ 353  13 119  20   9  54  36  38  50 113 121 177 122   2 211 365 185 241
+ 145 127 126 226 277 115  95 100  23  99 120  10 168 107 210  98 176 149
+   5  75 250  12 139  63 351  91 155  28 105 187 111 183  97 148 137 163
+ 114 128 189 184  94   7  67  49   6  41  58  14  33 112 181 151  45 323
+  84 158  96 203 109 224 336 132  40 348 159  90 233 152 209 264 162 179
+ 160 169 150  18  83 202  47 230 172  59 104 356 302 229  61 173 254 161
+ 327 331  22  11 191 315  57 364 102 251 220 341 358 319 288 355 350 360
+ 362 117 164 174  87 131 157 153 136  85 146  43 133 194  55 166 234 106
+ 143 193 363 316 361 178 249 123 216  80  56  31  29  66 154 196 101  73
+ 218 140  76 201 190 242  15 165 171 195   3 346  69  86  39 295  46 156
+ 125 263  72 231 103 219 246 253 144 345 313 359 329 332  79 338  77  42
+ 175 108 147 294  30  48 124  27 324  60  53  82  71 197 205 199  62 134
+ 141 270 310 214 129 186 357 257  92 268 221 237 243 256 235 252  34 273
+  81 287  24  89 212 293  74 276 296 303  35 222 344 340 354  17 110  19
+  26 347 240 333 352 300 170  37  70 248 188 272   4 297  88 200  16 217
+ 142 225 309 238 366 239 325 342  32 261 255 204 326  25  93 215 192 198
+ 271 182 317  21 278 130 232 339 223 206 289 135 322 334 306  68 281 247
+ 307 349   8 265 275 335 269 236 262 328 283 258 284 308 259 282 280 314
+ 337 228 245 213 330 267 343 291 290 285 318 321 260 292 299 312 311 320
+ 305 274 266 279 304 298].
+
+
+
+The number of messy States is: 4
+
+The number of messy Counties is: 247
+
+Expecting years to be between 2011 and 2017
+
+No invalid entries for: Year
+
+Expecting entries for Days with AQI column to between 0 and 366
+
+No invalid entries forDays with AQI
+
+Expecting entries for Good Days column to between 0 and 366
+
+No invalid entries forGood Days
+
+Expecting entries for Moderate Days column to between 0 and 366
+
+No invalid entries forModerate Days
+
+Expecting entries forMax AQI column to be greater than 0
+
+No invalid entries for Max AQI
+
+Expecting entries for90th Percentile AQI column to be greater than 0
+
+No invalid entries for 90th Percentile AQI
+
+Expecting entries forMedian AQI column to be greater than 0
+
+No invalid entries for Median AQI
+
+Expecting entries for Days CO column to between 0 and 366
+
+No invalid entries forDays CO
+
+Expecting entries for Days NO2 column to between 0 and 366
+
+No invalid entries forDays NO2
+
+Expecting entries for Days Ozone column to between 0 and 366
+
+No invalid entries forDays Ozone
+
+Expecting entries for Days SO2 column to between 0 and 366
+
+No invalid entries forDays SO2
+
+Expecting entries for Days PM2.5 column to between 0 and 366
+
+No invalid entries forDays PM2.5
+
+Expecting entries for Days PM10 column to between 0 and 366
+
+No invalid entries forDays PM10
