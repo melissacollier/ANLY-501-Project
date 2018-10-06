@@ -34,7 +34,7 @@ def nullCount(dataset, filename):
     nulls = dataset.isnull().values.ravel().sum()
     file1.write('\nThe total number of rows with null values is: \n' + str(nulls) +'.\n\n')
     file1.write("Count of missing value for each column:\n")
-    file1.write(pd.isna(data).sum().to_string())
+    file1.write(pd.isna(dataset).sum().to_string())
     file1.close()
 
 # get unique value for each variable
@@ -47,7 +47,12 @@ def get_Univalue(dataset, filename):
         file1.write('The unique values for ' + ' " '+ str(var) + '"' + ' are ' + str(unique_values) + '.\n\n')
         file1.close()
         
-
+def genFnsWrapper(dataset, filename):
+    checkType(dataset, filename)
+    dataInfo(dataset, filename)
+    nullCount(dataset, filename)
+    get_Univalue(dataset, filename)
+    
 ##break statement is used to exit out of the nearest for loop
 ##The purpose of this loop is to determine invalid States and Counties
 ##The output has repitition because there are multiple state,county entries within some keys.
@@ -117,7 +122,7 @@ def numericColumnChecker(allPollutionData,columns):
 def hasPM25(airPollutionData):
     binLabels = [0,1]
     binRange = [0,1,367]
-    allPollutionData['hasPM2.5'] = pd.cut(allPollutionData['Days PM2.5'],bins = binRange, 
+    airPollutionData['hasPM2.5'] = pd.cut(airPollutionData['Days PM2.5'],bins = binRange, 
                     right = False, labels = binLabels)
     return airPollutionData
 
@@ -138,10 +143,6 @@ def waterClean(data):
         wc.write(data['dataValue'].value_counts().to_string())
         wc.write("\nvalue_counts() function:check is there any error value in 'title' colomn \n")
         wc.write(data['title'].value_counts().to_string()) 
-    ### Second method to check missing values/typos/outliers in datasets   
-    displayOUT = data['display'].unique()
-    dataValueOUT = data['dataValue'].unique()
-    titleOUT = data['title'].unique()
     
     ### Datatype of dataValue is object, change it into numericals
     data['dataValue'] = pd.to_numeric(data['dataValue'], errors='coerce')
@@ -182,13 +183,15 @@ def waterClean(data):
     
     return result
     
- def main():
+def main():
     ### Water Data
     url='https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2016/0/0'
     waterResp = urllib.request.urlopen(url)
     waterRawdata = json.loads(waterResp.read().decode())
     # read json into dataframe, "dict" format, cannot read dict directly
-    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS'])    
+    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS']) 
+    #run general analysis
+    genFnsWrapper(waterDF, 'Water_data_analysis.txt')
     #### output into .csv file, optional
     waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
     ### use cleaning data function
@@ -197,8 +200,9 @@ def waterClean(data):
     ### Cancer Data
     url = 'https://www.statecancerprofiles.cancer.gov/incidencerates/index.php?stateFIPS=99&cancer=001&race=00&sex=0&age=001&type=incd&sortVariableName=rate&sortOrder=desc&output=1'
     s = requests.get(url).content
-    ds = pd.read_csv(io.StringIO(s.decode('windows-1252')), skiprows=8, skipfooter=27, engine='python')   
-
+    cancer_data = pd.read_csv(io.StringIO(s.decode('windows-1252')), skiprows=8, skipfooter=27, engine='python')   
+    genFnsWrapper(cancer_data, 'Cancer_data_analysis.txt')
+    
     ### Air quality Data
     data2017 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2017.zip')
     data2016 = pd.read_csv('https://aqs.epa.gov/aqsweb/airdata/annual_aqi_by_county_2016.zip')
@@ -219,6 +223,8 @@ def waterClean(data):
     countyReference.columns = new_header
     ##creating a single dataframe for air quality data and exporting to a csv file
     allPollutionData = pd.concat([data2017, data2016, data2015, data2014, data2013, data2012, data2011])
+    #general analysis
+    genFnsWrapper(allPollutionData, 'Air_data_analysis.txt')
     allPollutionData.to_csv('All_Pollution_Data.csv')
     dataOnlyStateCounty = allPollutionData.loc[:,['State','County']]
     referenceStateCounty = countyReference.loc[:,['State','County']]
