@@ -185,17 +185,17 @@ def waterClean(data):
     
 def main():
     ### Water Data
-    url='https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2016/0/0'
-    waterResp = urllib.request.urlopen(url)
-    waterRawdata = json.loads(waterResp.read().decode())
-    # read json into dataframe, "dict" format, cannot read dict directly
-    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS']) 
-    #run general analysis
-    genFnsWrapper(waterDF, 'Water_data_analysis.txt')
-    #### output into .csv file, optional
-    waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
-    ### use cleaning data function
-    waterResult = waterClean(waterDF)
+#    url='https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2016/0/0'
+#    waterResp = urllib.request.urlopen(url)
+#    waterRawdata = json.loads(waterResp.read().decode())
+#    # read json into dataframe, "dict" format, cannot read dict directly
+#    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS']) 
+#    #run general analysis
+#    genFnsWrapper(waterDF, 'Water_data_analysis.txt')
+#    #### output into .csv file, optional
+#    waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
+#    ### use cleaning data function
+#    waterResult = waterClean(waterDF)
 
     ### Cancer Data
     url = 'https://www.statecancerprofiles.cancer.gov/incidencerates/index.php?stateFIPS=99&cancer=001&race=00&sex=0&age=001&type=incd&sortVariableName=rate&sortOrder=desc&output=1'
@@ -227,14 +227,14 @@ def main():
     genFnsWrapper(allPollutionData, 'Air_data_analysis.txt')
     allPollutionData.to_csv('All_Pollution_Data.csv')
     dataOnlyStateCounty = allPollutionData.loc[:,['State','County']]
-    referenceStateCounty = countyReference.loc[:,['State','County']]
+    referenceStateCounty = countyReference.loc[:,['State','County Name']]
     ##groupby('State') is grouping the dataframe by the unique values in the State column.
     ##The values in Country column are mapped to each unique value from State column.
     ##Tthen index for County column and turn the values that are mapped to the State column into 
     ##each distinct list groupings.
     ##Then turn each unique grouping to a dict
     a = dataOnlyStateCounty.groupby('State')['County'].apply(list).to_dict()
-    b = referenceStateCounty.groupby('State')['County'].apply(list).to_dict()
+    b = referenceStateCounty.groupby('State')['County Name'].apply(list).to_dict()
     columns = ['Year','Days with AQI','Good Days','Moderate Days','Max AQI','90th Percentile AQI',
                'Median AQI','Days CO','Days NO2','Days Ozone',
                'Days SO2','Days PM2.5','Days PM10']
