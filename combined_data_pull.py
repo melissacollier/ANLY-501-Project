@@ -134,8 +134,6 @@ def waterClean(data):
     data['dataValue'] = pd.to_numeric(data['dataValue'], errors='coerce')
     ### Checking missing values/typos/outliers in datasets  
     with open ('waterCheck.txt','w') as wc:
-#        wc.write("\nHave a general understanding of the dataset:\n")
-#        wc.write(data.info().to_string())
         wc.write("\nvalue_counts() function: check is there any error value in 'display' colomn\n")
         wc.write(data['display'].value_counts().to_string())
         wc.write("\nvalue_counts() function:check is there any error value in 'dataValue' colomn\n")
@@ -184,17 +182,17 @@ def waterClean(data):
     
 def main():
     ### Water Data
-#    url='https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2016/0/0'
-#    waterResp = urllib.request.urlopen(url)
-#    waterRawdata = json.loads(waterResp.read().decode())
-#    # read json into dataframe, "dict" format, cannot read dict directly
-#    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS']) 
-#    #run general analysis
-#    genFnsWrapper(waterDF, 'Water_data_analysis.txt')
-#    #### output into .csv file, optional
-#    waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
-#    ### use cleaning data function
-#    waterResult = waterClean(waterDF)
+    url='https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2016/0/0'
+    waterResp = urllib.request.urlopen(url)
+    waterRawdata = json.loads(waterResp.read().decode())
+    # read json into dataframe, "dict" format, cannot read dict directly
+    waterDF=pd.DataFrame.from_dict(waterRawdata['pmTableResultWithCWS']) 
+    #run general analysis
+    genFnsWrapper(waterDF, 'Water_data_analysis.txt')
+    #### output into .csv file, optional
+    waterDF.to_csv('waterQuality.csv', sep='\t', encoding='utf-8')
+    ### use cleaning data function
+    waterResult = waterClean(waterDF)
 
     ### Cancer Data
     url = 'https://www.statecancerprofiles.cancer.gov/incidencerates/index.php?stateFIPS=99&cancer=001&race=00&sex=0&age=001&type=incd&sortVariableName=rate&sortOrder=desc&output=1'
