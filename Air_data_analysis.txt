@@ -447,7 +447,7 @@ The unique values for  " Days PM2.5" are [ 64 118  65  44   0 227  78 207  51  5
 
 The number of messy States is: 4
 
-The number of messy Counties is: 247
+The number of messy Counties is: 7336
 
 Expecting years to be between 2011 and 2017
 

@@ -6,30 +6,6 @@ Created on Fri Oct  5 21:02:12 2018
 @author: 
 """
 
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- @liu-yeqing Sign out
-2
-1 0 mac532/ANLY-501-Project
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
-ANLY-501-Project/combined_data_pull.py
-7e54c6f  an hour ago
-@arshiasingh arshiasingh added wrapper for general fns
-@arshiasingh @JJJJJingL
-     
-244 lines (206 sloc)  10.9 KB
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Sep 29 11:15:30 2018
-@dataset is very large, please wait for a few mins to load it.
-"""
-
 import urllib
 import urllib.request
 import pandas as pd
@@ -40,7 +16,6 @@ import requests
 ### check datatypes 
 def checkType(dataset, filename):
     file1 = open(filename,'a')
-    file1.write('Dataframe types are: ' + str(dataset.info()) +'.\n\n')
     file1.write("\nOverall review of dataset:\n")
     file1.write(dataset.describe().transpose().to_string())
     file1.close()
@@ -48,7 +23,7 @@ def checkType(dataset, filename):
 # function to write size/shape results to a .txt
 def dataInfo(dataset, filename):
     file1 = open(filename,'a')
-    file1.write('Size of the dataframe is ' + str(dataset.shape) +'.\n\n')
+    file1.write('\n\nSize of the dataframe is ' + str(dataset.shape) +'.\n\n')
     file1.write('There are ' + str(dataset.size) + ' elements in this dataset.\n\n')
     file1.write('Data types of each columns are\n ' + str(dataset.dtypes) +'\n\n')
     file1.close()
@@ -69,7 +44,7 @@ def get_Univalue(dataset, filename):
         var = names[i]
         unique_values = dataset[var].unique()
         file1 = open(filename,'a')
-        file1.write('The unique values for ' + ' " '+ str(var) + '"' + ' are ' + str(unique_values) + '.\n\n')
+        file1.write('\n\nThe unique values for ' + ' " '+ str(var) + '"' + ' are ' + str(unique_values) + '.\n\n')
         file1.close()
         
 def genFnsWrapper(dataset, filename):
@@ -236,12 +211,12 @@ def main():
     waterDF.to_csv('waterQuality.csv', sep=',', encoding='utf-8')
     ### use cleaning data function
     waterResult = waterClean(waterDF)
-    del waterResult["rollover"]
 
     ### Cancer Data
     url = 'https://www.statecancerprofiles.cancer.gov/incidencerates/index.php?stateFIPS=99&cancer=001&race=00&sex=0&age=001&type=incd&sortVariableName=rate&sortOrder=desc&output=1'
     s = requests.get(url).content
     cancer_data = pd.read_csv(io.StringIO(s.decode('windows-1252')), skiprows=8, skipfooter=27, engine='python')   
+    cancer_data.to_csv('uncleaned_cancer.csv', sep=',', encoding='utf-8')
     genFnsWrapper(cancer_data, 'Cancer_data_analysis.txt')
     
     ### Air quality Data
