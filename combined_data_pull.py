@@ -70,9 +70,10 @@ def stateCountyChecker(a,b):
                       print(key,"is not a valid State or the entry is messy")
                       countState += 1
                       break
-                  
-    print('The number of messy States is',countState)
-    print('The number of messy Counties is',countCounty)
+    file1 = open('Air_data_analysis.txt','a')
+    file1.write('\n\nThe number of messy States is: ' + str(countState))
+    file1.write('\n\nThe number of messy Counties is: ' + str(countCounty))
+    file1.close()              
 
 
 ##Leap years have 366 days.  2012 and 2016 are leap years
@@ -81,39 +82,51 @@ def numericColumnChecker(allPollutionData,columns):
     for i in columns:
           c = allPollutionData[i].value_counts().sort_index()
           if i == 'Year':
-                print("Expecting years to be between 2011 and 2017")
+                file1 = open('Air_data_analysis.txt','a')
+                file1.write('\n\nExpecting years to be between 2011 and 2017')
+                file1.close()   
                 indexLength = len(c)-1
-                
                 if c.index[0] < 2011 or c.index[indexLength] > 2017:
-                      print("There are invalid entries in years column")
                       invalidEntries = c[(c.index < 2011) | (c.index > 2017)].sum()
-                      print("The number of invalid entries is", invalidEntries)
+                      file1 = open('Air_data_analysis.txt','a')
+                      file1.write('\n\nThere are invalid entries in years column')
+                      file1.write('\nThe number of invalid entries is: '+str(invalidEntries))
+                      file1.close()
                 else:
-                      print("No invalid entries for",i)
-                      
+                    file1 = open('Air_data_analysis.txt','a')
+                    file1.write('\n\nNo invalid entries for: ', +str(i))
+                    file1.close()                     
           elif (i == 'Days with AQI' or i == 'Good Days' or i == 'Moderate Days' or i == 'Days CO'
                 or i == 'Days NO2' or i == 'Days Ozone' or i == 'Days SO2' or i == 'Days PM2.5'
                 or i == 'Days PM10'):
-                print("Expecting entries for",i,"column to between 0 and 366")
-                indexLength = len(c)-1
-                
-                if c.index[0] < 0 or c.index[indexLength] > 366:
-                      print("There are invalid intries in",i)
+                  file1 = open('Air_data_analysis.txt','a')
+                  file1.write('\n\nExpecting entries for ' + str(i) + ' column to between 0 and 366')
+                  file1.close()
+                  indexLength = len(c)-1               
+                  if c.index[0] < 0 or c.index[indexLength] > 366:
                       invalidEntries = c[(c.index < 0) | (c.index > 366)].sum()
-                      print("The number of invalid entries is", invalidEntries)
-                else:
-                      print("No invalid entries for",i)
-                      
+                      file1 = open('Air_data_analysis.txt','a')
+                      file1.write('\n\nThere are invalid intries in '+ str(i))
+                      file1.write('\nThe number of invalid entries is: '+ str(invalidEntries))
+                      file1.close()
+                  else:
+                      file1 = open('Air_data_analysis.txt','a')
+                      file1.write('\n\nNo invalid entries for' +str(i))
+                      file1.close()            
           elif (i == 'Max AQI' or i == '90th Percentile AQI' or i == 'Median AQI'):
-                print("Expecting entries for",i,"column to be greater than 0")
-    
+                file1 = open('Air_data_analysis.txt','a')
+                file1.write('\n\nExpecting entries for' +str(i)+' column to be greater than 0')
+                file1.close() 
                 if c.index[0] < 0:
-                      print("There are invalid intries in",i)
                       invalidEntries = c[c.index < 0].sum()
-                      print("The number of invalid entries is", invalidEntries)
+                      file1 = open('Air_data_analysis.txt','a')
+                      file1.write('\n\nThere are invalid intries in'+str(i))
+                      file1.write('\nThe number of invalid entries is: ', str(invalidEntries))
+                      file1.close()    
                 else:
-                      print("No invalid entries for",i)
-
+                      file1 = open('Air_data_analysis.txt','a')
+                      file1.write('\n\nNo invalid entries for '+ str(i))
+                      file1.close()  
 
 
 ##creating a bin for the Days PM2.5 variable.
@@ -211,9 +224,6 @@ def main():
     countyReference = pd.read_excel("https://www.schooldata.com/pdfs/US_FIPS_Codes.xls")
 
 
-    #######
-    ### Air Quality Cleaning
-    #######     
     ##fixing the header for CountyReference
     new_header = countyReference.iloc[0]
     countyReference = countyReference[1:]
@@ -235,6 +245,9 @@ def main():
     columns = ['Year','Days with AQI','Good Days','Moderate Days','Max AQI','90th Percentile AQI',
                'Median AQI','Days CO','Days NO2','Days Ozone',
                'Days SO2','Days PM2.5','Days PM10']
-
+    
+    stateCountyChecker(a,b)
+    numericColumnChecker(allPollutionData, columns)
+    
 
 main()
