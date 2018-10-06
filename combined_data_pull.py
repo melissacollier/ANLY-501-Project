@@ -15,7 +15,6 @@ import requests
 ### check datatypes 
 def checkType(dataset, filename):
     file1 = open(filename,'a')
-    file1.write('Dataframe types are: ' + str(dataset.info()) +'.\n\n')
     file1.write("\nOverall review of dataset:\n")
     file1.write(dataset.describe().transpose().to_string())
     file1.close()
@@ -23,7 +22,7 @@ def checkType(dataset, filename):
 # function to write size/shape results to a .txt
 def dataInfo(dataset, filename):
     file1 = open(filename,'a')
-    file1.write('Size of the dataframe is ' + str(dataset.shape) +'.\n\n')
+    file1.write('\n\nSize of the dataframe is ' + str(dataset.shape) +'.\n\n')
     file1.write('There are ' + str(dataset.size) + ' elements in this dataset.\n\n')
     file1.write('Data types of each columns are\n ' + str(dataset.dtypes) +'\n\n')
     file1.close()
@@ -44,7 +43,7 @@ def get_Univalue(dataset, filename):
         var = names[i]
         unique_values = dataset[var].unique()
         file1 = open(filename,'a')
-        file1.write('The unique values for ' + ' " '+ str(var) + '"' + ' are ' + str(unique_values) + '.\n\n')
+        file1.write('\n\nThe unique values for ' + ' " '+ str(var) + '"' + ' are ' + str(unique_values) + '.\n\n')
         file1.close()
         
 def genFnsWrapper(dataset, filename):
