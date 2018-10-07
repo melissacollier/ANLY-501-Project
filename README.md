@@ -2,7 +2,7 @@ ANLY-501-Project
 
 This is a description file for zip folder 'ANLY501 Group7 Project PartI'.
 
-
+'Project 1 Intro.docx' contains all of our written responses
 
 'All_Pollution_Data.csv', 'uncleaned_cancer.csv' and 'uncleaned_water.csv' are uncleaned csv files for air pollution, cancer and water quality datasets repectively. 
 
