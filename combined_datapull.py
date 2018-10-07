@@ -208,7 +208,7 @@ def main():
     #run general analysis
     genFnsWrapper(waterDF, 'Water_data_analysis.txt')
     #### output into .csv file, optional
-    waterDF.to_csv('waterQuality.csv', sep=',', encoding='utf-8')
+    waterDF.to_csv('uncleaned_waterQuality.csv', sep=',', encoding='utf-8')
     ### use cleaning data function
     waterResult = waterClean(waterDF)
 
