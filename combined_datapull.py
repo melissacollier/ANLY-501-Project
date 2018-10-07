@@ -199,7 +199,7 @@ def waterClean(data):
     
 def main():
     ### Water Data
-    url='https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2016/0/0'
+    url='https://ephtracking.cdc.gov:443/apigateway/api/v1/getCoreHolder/441/2/ALL/ALL/2015/0/0'
     waterResp = urllib.request.urlopen(url)
     waterRawdata = json.loads(waterResp.read().decode())
     # read json into dataframe, "dict" format, cannot read dict directly
