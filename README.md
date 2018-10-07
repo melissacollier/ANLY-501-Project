@@ -6,6 +6,7 @@ This is a description file for zip folder 'ANLY501 Group7 Project PartI'.
 
 'All_Pollution_Data.csv', 'uncleaned_cancer.csv' and 'uncleaned_water.csv' are uncleaned csv files for air pollution, cancer and water quality datasets repectively. 
 
+The "airDataNewFeature.txt" file contains the entire uncleaned dataset as well as a new feature called "hasPM2.5".
 
 
 'combined_datapull.py' includes all the python codes to investigate cleaniness of the three datasets.
@@ -26,7 +27,7 @@ main() also has customized functions for water and air datasets.
 
 functions that print results to the console: stateCountyChecker(a,b), waterClean(data)
 
-function that generate 'waterCheck.txt': waterClen(data)
+function that generate 'waterCheck.txt': waterClean(data)
 
 
 
