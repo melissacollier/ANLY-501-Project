@@ -255,5 +255,10 @@ def main():
     stateCountyChecker(a,b)
     numericColumnChecker(allPollutionData, columns)
     
+    allPollutionData = hasPM25(allPollutionData)
+    with open('airDataWithNewFeature.txt', 'a') as f:
+        f.write("\nThe cleaned dataset and new dataset features\n")
+        f.write(allPollutionData.to_string())
+    
 
 main()
